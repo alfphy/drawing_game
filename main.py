@@ -10,6 +10,7 @@ class MainWindow(qtw.QWidget):
         super().__init__()
         self.ui = containerForm.Ui_ContainerForm()
         self.ui.setupUi(self)
+        #hi
 
 app = qtw.QApplication(sys.argv)
 window = MainWindow()
