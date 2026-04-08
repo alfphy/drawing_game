@@ -12,12 +12,6 @@ class MainWindow(qtw.QWidget):
         super().__init__()
         self.ui = containerForm.Ui_ContainerForm()
         self.ui.setupUi(self)
-        #hi
-
-        asdfkjashdf
-        asdfasdf
-        add_func_stats(supports_dir_fd
-                       )
 
 app = qtw.QApplication(sys.argv)
 window = MainWindow()
