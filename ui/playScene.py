@@ -24,6 +24,11 @@ class Ui_playScene(object):
         self.label_difficulty = QtWidgets.QLabel(parent=playScene)
         self.label_difficulty.setObjectName("label_difficulty")
         self.horizontalLayout.addWidget(self.label_difficulty, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_timer = QtWidgets.QLabel(parent=playScene)
+
+        self.label_timer.setObjectName("label_timer")
+        self.horizontalLayout.addWidget(self.label_timer, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.verticalLayout_3 = QtWidgets.QVBoxLayout()
         self.verticalLayout_3.setObjectName("verticalLayout_3")

@@ -1,7 +1,17 @@
 import PyQt6.QtWidgets as qtw
 from PyQt6 import QtCore, QtGui
 import ui.playScene
+import numpy as np
 
+import time
+
+
+def qimage_to_numpy(qimage):
+    qimage = qimage.convertToFormat(QtGui.QImage.Format.Format_RGB888)
+    width, height = qimage.width(), qimage.height()
+    ptr = qimage.bits()
+    ptr.setsize(height * width * 3)
+    return np.array(ptr).reshape(height, width, 3)
 
 class DrawingCanvas(qtw.QWidget):
     def __init__(self, parent=None):
@@ -49,6 +59,64 @@ class PlayPages(qtw.QWidget):
         self.ui = ui.playScene.Ui_playScene()
         self.ui.setupUi(self)
         self.ui.drawing_space.hide()
-        self.canvas = DrawingCanvas()
+        self.canvas = DrawingCanvas(self)
         self.ui.verticalLayout_4.addWidget(self.canvas)
+
+        # Timer setup
+        self.time_left = 60  # 60 seconds default
+        self.timer = QtCore.QTimer()
+        self.timer.timeout.connect(self.update_timer)
+
+        # Connect buttons (adjust names to match your UI)
+        # self.ui.startButton.clicked.connect(self.start_timer)
+        # self.ui.submitButton.clicked.connect(self.stop_timer)
+
+        # Display initial time
+        self.update_timer_display()
+        self.start_timer(30)
+
+    def start_timer(self, seconds=60):
+        """Start the countdown timer"""
+        self.time_left = seconds
+        self.timer.start(1000)  # 1000ms = 1 second
+        self.update_timer_display()
+
+    def stop_timer(self):
+        """Stop the timer"""
+        self.timer.stop()
+
+    def reset_timer(self, seconds=60):
+        """Reset timer to initial value"""
+        self.time_left = seconds
+        self.update_timer_display()
+
+    def update_timer(self):
+        """Called every second by QTimer"""
+        self.time_left -= 1
+        self.update_timer_display()
+
+        if self.time_left <= 0:
+            self.timer.stop()
+            self.times_up()
+
+        # Visual warning when time is low
+        if self.time_left <= 10:
+            self.ui.label_timer.setStyleSheet("color: red; font-weight: bold;")
+
+    def update_timer_display(self):
+        """Update the timer label"""
+        minutes = self.time_left // 60
+        seconds = self.time_left % 60
+        self.ui.label_timer.setText(f"{minutes:02d}:{seconds:02d}")
+
+    def times_up(self):
+        """Called when timer reaches 0"""
+        self.ui.label_timer.setText("TIME'S UP!")
+        # Auto-submit or disable drawing here
+        # self.submit_drawing()
+
+    def get_remaining_time(self):
+        """Return time left in seconds"""
+        return self.time_left
+
 
