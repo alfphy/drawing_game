@@ -13,4 +13,3 @@ class MainPages(qtw.QWidget):
 
     def button_easy(self):
         self.parent.ui.stack_pages.setCurrentIndex(3)
-
