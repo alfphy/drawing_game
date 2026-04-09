@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/containerForm.ui'
+# Form implementation generated from reading ui file 'ui\containerForm.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -12,34 +12,32 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_ContainerForm(object):
     def setupUi(self, ContainerForm):
         ContainerForm.setObjectName("ContainerForm")
-        ContainerForm.resize(720, 720)
+        ContainerForm.resize(611, 440)
         icon = QtGui.QIcon.fromTheme("applications-games")
         ContainerForm.setWindowIcon(icon)
-        ContainerForm.setStyleSheet("\n"
-"    QWidget#ContainerForm {\n"
-"        background-color: #2c3e50;\n"
-"    }\n"
-"    QLabel#label_title {\n"
-"        color: white;\n"
-"        font-size: 24px;\n"
-"        font-weight: bold;\n"
-"        padding: 10px;\n"
-"    }\n"
-"    QPushButton#button_menu {\n"
-"        background-color: #e74c3c;\n"
-"        color: white;\n"
-"        border: none;\n"
-"        padding: 8px 16px;\n"
-"        border-radius: 4px;\n"
-"        font-weight: bold;\n"
-"    }\n"
-"    QPushButton#button_menu:hover {\n"
-"        background-color: #c0392b;\n"
-"    }\n"
-"    QPushButton#button_menu:pressed {\n"
-"        background-color: #a93226;\n"
-"    }\n"
-"   ")
+        ContainerForm.setStyleSheet("QWidget#ContainerForm {\n"
+"    background-color: rgb(107, 122, 245);\n"
+"}\n"
+"QLabel#label_title {\n"
+"    color: #ffffff;\n"
+"    font-size: 24px;\n"
+"    font-weight: bold;\n"
+"    padding: 10px;\n"
+"}\n"
+"QPushButton#button_menu {\n"
+"    background-color: #e74c3c;\n"
+"    color: #ffffff;\n"
+"    border: none;\n"
+"    padding: 8px 16px;\n"
+"    border-radius: 4px;\n"
+"    font-weight: bold;\n"
+"}\n"
+"QPushButton#button_menu:hover {\n"
+"    background-color: #c0392b;\n"
+"}\n"
+"QPushButton#button_menu:pressed {\n"
+"    background-color: #a93226;\n"
+"}")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(ContainerForm)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
@@ -54,7 +52,7 @@ class Ui_ContainerForm(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.stack_pages = QtWidgets.QStackedWidget(parent=ContainerForm)
-        self.stack_pages.setObjectName("stack_pages")   
+        self.stack_pages.setObjectName("stack_pages")
         self.horizontalLayout.addWidget(self.stack_pages)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout_2.setStretch(1, 1)
