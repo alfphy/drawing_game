@@ -54,7 +54,7 @@ class Ui_ContainerForm(object):
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.stack_pages = QtWidgets.QStackedWidget(parent=ContainerForm)
-        self.stack_pages.setObjectName("stack_pages")
+        self.stack_pages.setObjectName("stack_pages")   
         self.horizontalLayout.addWidget(self.stack_pages)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout_2.setStretch(1, 1)

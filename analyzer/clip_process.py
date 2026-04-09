@@ -5,6 +5,8 @@ import torch
 model = CLIPModel.from_pretrained("analyzer/clip")
 processor = CLIPProcessor.from_pretrained("analyzer/clip")
 def score_drawing(image,challenge_phrase):
+
+
     # Process image and text
     inputs = processor(text=[challenge_phrase], images=image, return_tensors="pt", padding=True)
 

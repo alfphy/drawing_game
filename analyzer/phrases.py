@@ -3,8 +3,19 @@
 
 def get_phrase(category_index, phrase_index):
     category_name = categories[category_index]
-    return category_name, phrases_list[str(category_name)][phrase_index]
+    # if category_name == "Animals":
+    #     prefix = "a sketch of a"
+    # elif category_name == "Flowers":
+    #     prefix = "a sketch of a"
+    # elif category_name == "Emoji":
+    #     prefix = "an emoji of"
+    # elif category_name == "Vehicles":
+    #     prefix = "a sketch of a"
+    # else:
+    #     prefix = "a drawing of"
+    return category_name, f"{phrases_list[str(category_name)][phrase_index]}"
 categories = ["Animals", "Flowers", "Emoji", "Vehicles"]
+
 #easy
 phrases_list = {
     "Animals": [
@@ -31,32 +42,32 @@ phrases_list = {
     ],
 
     "Flowers": [
-        "a red rose",
-        "a yellow tulip",
-        "a white daisy",
-        "a tall sunflower",
-        "a pink lotus",
-        "a lily in a pond",
-        "a purple orchid",
-        "a cactus in a pot",
-        "a spotted mushroom",
-        "a big tree",
-        "a falling leaf",
-        "a palm tree on a beach",
-        "a pine tree with cones",
-        "a cherry blossom branch",
-        "a four leaf clover",
-        "a hanging vine",
-        "a bamboo stalk",
-        "a curly fern",
-        "ivy on a wall",
+        "a rose with a stem and leaf",
+        "a tulip with a curved stem",
+        "a daisy with round petals",
+        "a sunflower with big petals",
+        "a lotus floating on water",
+        "a lily with drooping petals",
+        "an orchid on a branch",
+        "a cactus in a small pot",
+        "a mushroom with spots",
+        "a tree with branches",
+        "a leaf falling down",
+        "a palm tree with coconuts",
+        "a pine tree with a pointy top",
+        "a branch with blossoms",
+        "a clover with four leaves",
+        "a vine hanging down",
+        "a bamboo stalk with lines",
+        "a fern with tiny leaves",
+        "ivy climbing a wall",
         "a round bush"
     ],
 
     "Emoji": [
         "a happy smiley face",
-        "a frowning sad face",
-        "an angry red face",
+        "a sad frowning face",
+        "an angry face",
         "a face crying tears",
         "a face laughing hard",
         "a face with heart eyes",
@@ -68,34 +79,34 @@ phrases_list = {
         "a sick face with thermometer",
         "a nerdy face with glasses",
         "a cowboy face with hat",
-        "a clown face with red nose",
-        "a white skull",
+        "a clown face with big nose",
+        "a skull with eye holes",
         "a cute ghost",
-        "a green alien head",
+        "an alien head with big eyes",
         "a robot face",
         "a poop emoji"
     ],
 
     "Vehicles": [
-        "a small red car",
-        "a big yellow bus",
-        "a long train with smoke",
+        "a small car",
+        "a big bus",
+        "a train with smoke",
         "an airplane in the sky",
-        "a helicopter with blades",
+        "a helicopter with spinning blades",
         "a sailboat on water",
-        "a large cruise ship",
+        "a large ship",
         "a bicycle with two wheels",
         "a fast motorcycle",
-        "a big dump truck",
+        "a dump truck",
         "a rocket blasting off",
-        "a yellow submarine",
-        "a colorful hot air balloon",
+        "a submarine underwater",
+        "a hot air balloon floating",
         "a small scooter",
         "a skateboard with wheels",
-        "a green tractor",
+        "a tractor in a field",
         "an ambulance with siren",
-        "a red fire truck",
+        "a fire truck with ladder",
         "a police car with lights",
-        "a yellow taxi cab"
+        "a taxi cab"
     ]
 }
