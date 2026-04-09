@@ -14,34 +14,33 @@
    <string>Speed Sketch</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="applications-games"/>
+   <iconset theme="applications-games">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-    QWidget#ContainerForm {
-        background-color: #2c3e50;
-    }
-    QLabel#label_title {
-        color: white;
-        font-size: 24px;
-        font-weight: bold;
-        padding: 10px;
-    }
-    QPushButton#button_menu {
-        background-color: #e74c3c;
-        color: white;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 4px;
-        font-weight: bold;
-    }
-    QPushButton#button_menu:hover {
-        background-color: #c0392b;
-    }
-    QPushButton#button_menu:pressed {
-        background-color: #a93226;
-    }
-   </string>
+   <string notr="true">QWidget#ContainerForm {
+    background-color: rgb(107, 122, 245);
+}
+QLabel#label_title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+}
+QPushButton#button_menu {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+QPushButton#button_menu:hover {
+    background-color: #c0392b;
+}
+QPushButton#button_menu:pressed {
+    background-color: #a93226;
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
    <item>
@@ -65,10 +64,8 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QStackedWidget" name="stack_pages">
-       <widget class="QWidget" name="page"/>
-       <widget class="QWidget" name="page_2"/>
-      </widget>
+       <widget class="QStackedWidget" name="stack_pages">
+       </widget>
      </item>
     </layout>
    </item>
