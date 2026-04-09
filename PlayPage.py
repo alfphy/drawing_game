@@ -101,7 +101,7 @@ class PlayPage(qtw.QWidget):
         self.ui.choose_color.clicked.connect(self.choose_color)
         #random by default pag kuha og phrase
         phrase_index = random.randint(0,19)
-        category_index = random.randint(0,3)
+        category_index = random.randint(0,4)
 
         category_name, phrase = analyzer.phrases.get_phrase(category_index, phrase_index)
 
