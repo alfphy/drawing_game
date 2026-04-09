@@ -3,14 +3,14 @@ import ui.mainPage
 
 
 
-class MainPages(qtw.QWidget):
+class MainPage(qtw.QWidget):
     def __init__(self, parent):
         super().__init__()
         self.parent = parent
         self.ui = ui.mainPage.Ui_mainMenu()
         self.ui.setupUi(self)
-        self.ui.button_easy.clicked.connect(self.button_easy)
+        self.ui.button_easy.clicked.connect(self.button_easy_click)
 
-    def button_easy(self):
-        self.parent.ui.stack_pages.setCurrentIndex(3)
+    def button_easy_click(self):
+        self.parent.ui.stack_pages.setCurrentIndex(1)
 

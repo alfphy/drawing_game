@@ -14,38 +14,46 @@
    <string>Speed Sketch</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="applications-games"/>
+   <iconset theme="applications-games">
+    <normaloff>.</normaloff>.</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item alignment="Qt::AlignTop">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="label_difficulty">
          <property name="text">
           <string>Easy</string>
          </property>
         </widget>
        </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_3"/>
-     </item>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <item>
-        <widget class="QWidget" name="drawing_space" native="true">
-         <property name="minimumSize">
-          <size>
-           <width>300</width>
-           <height>300</height>
-          </size>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLabel" name="label_timer">
+         <property name="text">
+          <string>30 seconds</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLabel" name="label_category">
+         <property name="text">
+          <string>display category...</string>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QLabel" name="label_phrase">
+         <property name="text">
+          <string>displaying phrase...</string>
          </property>
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="drawing_space"/>
      </item>
     </layout>
    </item>

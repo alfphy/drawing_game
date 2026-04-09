@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_ContainerForm(object):
     def setupUi(self, ContainerForm):
         ContainerForm.setObjectName("ContainerForm")
-        ContainerForm.resize(611, 440)
+        ContainerForm.resize(720, 720)
         icon = QtGui.QIcon.fromTheme("applications-games")
         ContainerForm.setWindowIcon(icon)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(ContainerForm)
@@ -30,12 +30,6 @@ class Ui_ContainerForm(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.stack_pages = QtWidgets.QStackedWidget(parent=ContainerForm)
         self.stack_pages.setObjectName("stack_pages")
-        self.page = QtWidgets.QWidget()
-        self.page.setObjectName("page")
-        self.stack_pages.addWidget(self.page)
-        self.page_2 = QtWidgets.QWidget()
-        self.page_2.setObjectName("page_2")
-        self.stack_pages.addWidget(self.page_2)
         self.horizontalLayout.addWidget(self.stack_pages)
         self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.verticalLayout_2.setStretch(1, 1)

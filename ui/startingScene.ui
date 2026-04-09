@@ -14,7 +14,11 @@
    <string>Speed Sketch</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="applications-games"/>
+   <iconset theme="applications-games">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -38,117 +42,69 @@
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_4">
-         <item alignment="Qt::AlignRight">
-          <widget class="QPushButton" name="button_animals">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Animals</string>
-           </property>
-          </widget>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+        <widget class="QListWidget" name="listwidget_categories">
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">  QListWidget {
+        background-color: #2b2b2b;
+        border: 2px solid #3d3d3d;
+        border-radius: 8px;
+        padding: 5px;
+        color: #ffffff;
+        font-size: 14px;
+    }
+    QListWidget::item {
+        padding: 10px;
+        border-bottom: 1px solid #3d3d3d;
+        border-radius: 4px;
+    }
+    QListWidget::item:hover {
+        background-color: #3d3d3d;
+    }
+QListWidget::item:selected {
+        background-color: #2b2b2b;
+        color: white;
+    }</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Animals</string>
+          </property>
+          <property name="checkState">
+           <enum>Checked</enum>
+          </property>
          </item>
-         <item alignment="Qt::AlignRight">
-          <widget class="QPushButton" name="button_expression">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Expression</string>
-           </property>
-          </widget>
+         <item>
+          <property name="text">
+           <string>Flowers</string>
+          </property>
+          <property name="checkState">
+           <enum>Checked</enum>
+          </property>
          </item>
-         <item alignment="Qt::AlignRight">
-          <widget class="QPushButton" name="pushButton_4">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Category</string>
-           </property>
-          </widget>
+         <item>
+          <property name="text">
+           <string>Emoji</string>
+          </property>
+          <property name="checkState">
+           <enum>Checked</enum>
+          </property>
          </item>
-         <item alignment="Qt::AlignRight">
-          <widget class="QPushButton" name="pushButton_3">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Category</string>
-           </property>
-          </widget>
+         <item>
+          <property name="text">
+           <string>Vehicle</string>
+          </property>
+          <property name="checkState">
+           <enum>Checked</enum>
+          </property>
          </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item alignment="Qt::AlignLeft">
-          <widget class="QPushButton" name="button_flowers">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Flowers</string>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignLeft">
-          <widget class="QPushButton" name="button_art">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Art</string>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignLeft">
-          <widget class="QPushButton" name="pushButton_8">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Category</string>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignLeft">
-          <widget class="QPushButton" name="pushButton_6">
-           <property name="minimumSize">
-            <size>
-             <width>250</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Category</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        </widget>
        </item>
       </layout>
      </item>
