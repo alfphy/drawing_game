@@ -6,7 +6,8 @@ import ui.playScene
 import numpy as np
 import analyzer.phrases
 import time
-
+from PyQt6.QtGui import QColor
+from PyQt6.QtWidgets import QColorDialog, QPushButton
 
 import random
 class DrawingCanvas(qtw.QWidget):
@@ -19,6 +20,12 @@ class DrawingCanvas(qtw.QWidget):
         self.last_point = None
         self.brush_size = 3
         self.brush_color = QtCore.Qt.GlobalColor.black
+
+
+    def clear(self):
+        self.image.fill(QtCore.Qt.GlobalColor.white)
+        self.update()
+
     def mousePressEvent(self, event):
         if self.parent.time_left == 0:
             print("time out")
@@ -91,7 +98,7 @@ class PlayPage(qtw.QWidget):
         self.canvas = DrawingCanvas(self)
         self.ui.drawing_space.addWidget(self.canvas)
         self.ui.drawing_space.setAlignment(self.canvas,  QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
-
+        self.ui.choose_color.clicked.connect(self.choose_color)
         #random by default pag kuha og phrase
         phrase_index = random.randint(0,19)
         category_index = random.randint(0,3)
@@ -107,6 +114,13 @@ class PlayPage(qtw.QWidget):
 
 
         self.update_timer_display()
+
+    def choose_color(self):
+        color = QColorDialog.getColor()
+
+        if color.isValid():
+            self.canvas.brush_color = color
+            self.ui.widget_colorselected.setStyleSheet(f"background-color: {color.name()};")
 
     def start_timer(self, seconds=60):
         """Start the countdown timer"""
@@ -148,7 +162,19 @@ class PlayPage(qtw.QWidget):
         self.canvas.save_image()
 
         print("Generating result")
-        analyzer.clip_process.score_drawing('draw.png',str(self.ui.label_phrase.text()))
+        score = analyzer.clip_process.score_drawing('draw.png',str(self.ui.label_phrase.text()))
+
+        print("New phrase coming...")
+        self.canvas.clear()
+        phrase_index = random.randint(0, 19)
+        category_index = random.randint(0, 3)
+
+        category_name, phrase = analyzer.phrases.get_phrase(category_index, phrase_index)
+
+        self.ui.label_phrase.setText(phrase)
+        self.ui.label_category.setText(str(category_name))
+        self.start_timer(30)
+
 
 
     def get_remaining_time(self):
