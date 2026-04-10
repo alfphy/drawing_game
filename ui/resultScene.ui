@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>485</width>
-    <height>811</height>
+    <height>900</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -74,7 +74,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>20</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -95,7 +94,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>14</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -113,7 +111,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>14</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -131,7 +128,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>14</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -179,7 +175,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>20</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -200,7 +195,6 @@
            <font>
             <family>SansSerif</family>
             <pointsize>14</pointsize>
-            <weight>75</weight>
             <bold>true</bold>
            </font>
           </property>
@@ -226,7 +220,6 @@
       <font>
        <family>MS Sans Serif</family>
        <pointsize>30</pointsize>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>

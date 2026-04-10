@@ -1,5 +1,6 @@
 import sys
 import PyQt6.QtWidgets as qtw
+from PyQt6.QtGui import QPalette , QColor
 import ui.containerForm
 
 from MainPage import MainPage

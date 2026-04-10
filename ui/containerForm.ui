@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>611</width>
-    <height>440</height>
+    <width>1090</width>
+    <height>608</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,57 +15,113 @@
   </property>
   <property name="windowIcon">
    <iconset theme="applications-games">
-    <normaloff>.</normaloff>.</iconset>
+    <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget#ContainerForm {
-    background-color: rgb(107, 122, 245);
-}
-QLabel#label_title {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 10px;
-}
-QPushButton#button_menu {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: bold;
-}
-QPushButton#button_menu:hover {
-    background-color: #c0392b;
-}
-QPushButton#button_menu:pressed {
-    background-color: #a93226;
-}</string>
+   <string notr="true">background-color:black;
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLabel" name="label_title">
-       <property name="text">
-        <string>Speed Sketch</string>
+      <widget class="QWidget" name="tab_bar" native="true">
+       <property name="autoFillBackground">
+        <bool>false</bool>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="button_menu">
-       <property name="text">
-        <string>Logout</string>
+       <property name="styleSheet">
+        <string notr="true">background-color:black
+;</string>
        </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_title">
+          <property name="styleSheet">
+           <string notr="true">font: 600 oblique 30pt &quot;URW Gothic&quot;;
+border:none;
+
+margin-left:10px;
+color:#2979FF;
+</string>
+          </property>
+          <property name="text">
+           <string>Speed Sketch</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="button_menu">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color:white; 
+border-radius:20px;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
      <item>
-       <widget class="QStackedWidget" name="stack_pages">
-       </widget>
+      <widget class="QStackedWidget" name="stack_pages">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
