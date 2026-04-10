@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1060</width>
-    <height>590</height>
+    <height>238</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset theme="applications-games">
-    <normaloff>.</normaloff>.</iconset>
+    <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
@@ -25,7 +25,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QFrame" name="">
+    <widget class="QFrame" name="frame">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(107, 122, 245);</string>
      </property>
@@ -71,7 +71,7 @@ padding: 0%;
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2"/>
    </item>
-   <item>
+   <item alignment="Qt::AlignHCenter">
     <widget class="QListWidget" name="listwidget_categories">
      <property name="minimumSize">
       <size>

@@ -1,0 +1,4 @@
+requests
+transformers
+PyQt6
+pillow

@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/mainPage.ui'
+# Form implementation generated from reading ui file 'ui\mainPage.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -12,44 +12,79 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_mainMenu(object):
     def setupUi(self, mainMenu):
         mainMenu.setObjectName("mainMenu")
-        mainMenu.resize(1529, 795)
+        mainMenu.resize(1529, 905)
         icon = QtGui.QIcon.fromTheme("applications-games")
         mainMenu.setWindowIcon(icon)
-        mainMenu.setStyleSheet("background-color:black;")
+        mainMenu.setStyleSheet("background-color:#161616; color:white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(mainMenu)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.widget = QtWidgets.QWidget(parent=mainMenu)
-        self.widget.setMinimumSize(QtCore.QSize(350, 150))
-        self.widget.setStyleSheet("background-color:black; \n"
-"border: 1px solid gray;\n"
-"margin:20px;\n"
-"border-radius:10px\n"
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_4.setSizeConstraint(QtWidgets.QLayout.SizeConstraint.SetDefaultConstraint)
+        self.verticalLayout_4.setContentsMargins(0, -1, 0, -1)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        self.frame = QtWidgets.QFrame(parent=mainMenu)
+        self.frame.setMinimumSize(QtCore.QSize(1400, 50))
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame.setStyleSheet("background-color:transparent;")
+        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_5.setSpacing(20)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SizeConstraint.SetFixedSize)
+        self.horizontalLayout.setContentsMargins(-1, -1, -1, 0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.widget = QtWidgets.QWidget(parent=self.frame)
+        self.widget.setMinimumSize(QtCore.QSize(700, 150))
+        self.widget.setMaximumSize(QtCore.QSize(1650, 150))
+        self.widget.setObjectName("widget")
+        self.label = QtWidgets.QLabel(parent=self.widget)
+        self.label.setGeometry(QtCore.QRect(9, 35, 1491, 106))
+        self.label.setMinimumSize(QtCore.QSize(0, 100))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.label.setStyleSheet("border:none; background-color:transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(parent=self.widget)
+        self.label_2.setGeometry(QtCore.QRect(30, 30, 201, 20))
+        self.label_2.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_2.setStyleSheet("color:#7da5e7; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "\n"
 "")
-        self.widget.setObjectName("widget")
-        self.horizontalLayout_2.addWidget(self.widget)
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setContentsMargins(20, -1, 20, -1)
-        self.horizontalLayout.setSpacing(20)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.widget_3 = QtWidgets.QWidget(parent=mainMenu)
-        self.widget_3.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
-        self.widget_3.setObjectName("widget_3")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.widget_3)
+        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.widget)
+        self.verticalLayout_5.addLayout(self.horizontalLayout)
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setContentsMargins(0, -1, 0, -1)
+        self.horizontalLayout_6.setSpacing(20)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.frame_3 = QtWidgets.QFrame(parent=self.frame)
+        self.frame_3.setMaximumSize(QtCore.QSize(450, 550))
+        self.frame_3.setStyleSheet("QFrame {\n"
+"    background-color: #1c1b1b;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QFrame:hover {\n"
+"    background-color: #2B2B2A;\n"
+"}")
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.frame_3)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.easy_card_2 = QtWidgets.QWidget(parent=self.widget_3)
-        self.easy_card_2.setMaximumSize(QtCore.QSize(450, 600))
-        self.easy_card_2.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
+        self.easy_card_2 = QtWidgets.QWidget(parent=self.frame_3)
+        self.easy_card_2.setMaximumSize(QtCore.QSize(350, 450))
+        self.easy_card_2.setStyleSheet("background-color:transparent;")
         self.easy_card_2.setObjectName("easy_card_2")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.easy_card_2)
         self.verticalLayout_8.setContentsMargins(20, 20, 20, 20)
         self.verticalLayout_8.setSpacing(20)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.widget_5 = QtWidgets.QWidget(parent=self.easy_card_2)
-        self.widget_5.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget_5.setMaximumSize(QtCore.QSize(16777215, 70))
         self.widget_5.setObjectName("widget_5")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.widget_5)
         self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
@@ -70,7 +105,8 @@ class Ui_mainMenu(object):
         self.label_14 = QtWidgets.QLabel(parent=self.widget_5)
         self.label_14.setMinimumSize(QtCore.QSize(100, 0))
         self.label_14.setMaximumSize(QtCore.QSize(120, 30))
-        self.label_14.setStyleSheet("border:1px solid gray; border-radius: 0px;")
+        self.label_14.setStyleSheet("border:1px solid #31445F; border-radius: 0px\n"
+"")
         self.label_14.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_14.setObjectName("label_14")
         self.verticalLayout_14.addWidget(self.label_14, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -81,6 +117,7 @@ class Ui_mainMenu(object):
         self.label_11 = QtWidgets.QLabel(parent=self.easy_card_2)
         font = QtGui.QFont()
         font.setBold(True)
+        font.setWeight(75)
         self.label_11.setFont(font)
         self.label_11.setStyleSheet("")
         self.label_11.setObjectName("label_11")
@@ -88,6 +125,7 @@ class Ui_mainMenu(object):
         self.label_12 = QtWidgets.QLabel(parent=self.easy_card_2)
         self.label_12.setMaximumSize(QtCore.QSize(1000, 1000))
         self.label_12.setTextFormat(QtCore.Qt.TextFormat.RichText)
+        self.label_12.setWordWrap(True)
         self.label_12.setObjectName("label_12")
         self.verticalLayout_11.addWidget(self.label_12)
         self.label_13 = QtWidgets.QLabel(parent=self.easy_card_2)
@@ -96,27 +134,54 @@ class Ui_mainMenu(object):
         self.verticalLayout_11.addWidget(self.label_13)
         self.button_easy = QtWidgets.QPushButton(parent=self.easy_card_2)
         self.button_easy.setMinimumSize(QtCore.QSize(0, 60))
-        self.button_easy.setStyleSheet("background-color:#0069EC; font-weight: bold;")
+        self.button_easy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.button_easy.setMouseTracking(False)
+        self.button_easy.setStyleSheet("QPushButton{background-color:#0069EC;\n"
+" font-weight: bold;\n"
+" border-radius:20px;\n"
+"    color: white;\n"
+"    font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"    font-weight: bold;\n"
+"    font-style: italic;\n"
+"    letter-spacing: -0.025em;\n"
+"font-size:16px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color:#0183FF;\n"
+"}\n"
+"")
         self.button_easy.setObjectName("button_easy")
         self.verticalLayout_11.addWidget(self.button_easy)
         self.verticalLayout_8.addLayout(self.verticalLayout_11)
         self.horizontalLayout_4.addWidget(self.easy_card_2)
-        self.horizontalLayout.addWidget(self.widget_3)
-        self.widget_4 = QtWidgets.QWidget(parent=mainMenu)
-        self.widget_4.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
-        self.widget_4.setObjectName("widget_4")
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.widget_4)
+        self.horizontalLayout_6.addWidget(self.frame_3)
+        self.frame_4 = QtWidgets.QFrame(parent=self.frame)
+        self.frame_4.setMaximumSize(QtCore.QSize(450, 550))
+        self.frame_4.setStyleSheet("QFrame {\n"
+"    background-color: #1c1b1b;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QFrame:hover {\n"
+"    background-color: #2B2B2A;\n"
+"}")
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.frame_4)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.easy_card_3 = QtWidgets.QWidget(parent=self.widget_4)
-        self.easy_card_3.setMaximumSize(QtCore.QSize(450, 600))
-        self.easy_card_3.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
+        self.easy_card_3 = QtWidgets.QWidget(parent=self.frame_4)
+        self.easy_card_3.setMinimumSize(QtCore.QSize(0, 0))
+        self.easy_card_3.setMaximumSize(QtCore.QSize(350, 450))
+        self.easy_card_3.setStyleSheet("background-color:transparent")
         self.easy_card_3.setObjectName("easy_card_3")
         self.verticalLayout_9 = QtWidgets.QVBoxLayout(self.easy_card_3)
         self.verticalLayout_9.setContentsMargins(20, 20, 20, 20)
         self.verticalLayout_9.setSpacing(20)
         self.verticalLayout_9.setObjectName("verticalLayout_9")
         self.widget_6 = QtWidgets.QWidget(parent=self.easy_card_3)
-        self.widget_6.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget_6.setMaximumSize(QtCore.QSize(16777215, 70))
         self.widget_6.setObjectName("widget_6")
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout(self.widget_6)
         self.horizontalLayout_11.setContentsMargins(0, 0, 0, 0)
@@ -137,7 +202,7 @@ class Ui_mainMenu(object):
         self.label_15 = QtWidgets.QLabel(parent=self.widget_6)
         self.label_15.setMinimumSize(QtCore.QSize(100, 0))
         self.label_15.setMaximumSize(QtCore.QSize(120, 30))
-        self.label_15.setStyleSheet("border:1px solid gray; border-radius: 0px;")
+        self.label_15.setStyleSheet("border:1px solid #31445F; border-radius: 0px;")
         self.label_15.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_15.setObjectName("label_15")
         self.verticalLayout_20.addWidget(self.label_15, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -148,6 +213,7 @@ class Ui_mainMenu(object):
         self.label_16 = QtWidgets.QLabel(parent=self.easy_card_3)
         font = QtGui.QFont()
         font.setBold(True)
+        font.setWeight(75)
         self.label_16.setFont(font)
         self.label_16.setStyleSheet("")
         self.label_16.setObjectName("label_16")
@@ -155,6 +221,7 @@ class Ui_mainMenu(object):
         self.label_17 = QtWidgets.QLabel(parent=self.easy_card_3)
         self.label_17.setMaximumSize(QtCore.QSize(1000, 1000))
         self.label_17.setTextFormat(QtCore.Qt.TextFormat.RichText)
+        self.label_17.setWordWrap(True)
         self.label_17.setObjectName("label_17")
         self.verticalLayout_12.addWidget(self.label_17)
         self.label_22 = QtWidgets.QLabel(parent=self.easy_card_3)
@@ -163,27 +230,53 @@ class Ui_mainMenu(object):
         self.verticalLayout_12.addWidget(self.label_22)
         self.button_medium = QtWidgets.QPushButton(parent=self.easy_card_3)
         self.button_medium.setMinimumSize(QtCore.QSize(0, 60))
-        self.button_medium.setStyleSheet("background-color:#0069EC; font-weight: bold;")
+        self.button_medium.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.button_medium.setStyleSheet("QPushButton{background-color:#E9C400;\n"
+" font-weight: bold;\n"
+" border-radius:20px;\n"
+"    color: black;\n"
+"    font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"    font-weight: bold;\n"
+"    font-style: italic;\n"
+"    letter-spacing: -0.025em;\n"
+"font-size:16px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color:#FFD901;\n"
+"}\n"
+"")
         self.button_medium.setObjectName("button_medium")
         self.verticalLayout_12.addWidget(self.button_medium)
         self.verticalLayout_9.addLayout(self.verticalLayout_12)
         self.horizontalLayout_5.addWidget(self.easy_card_3)
-        self.horizontalLayout.addWidget(self.widget_4)
-        self.widget_2 = QtWidgets.QWidget(parent=mainMenu)
-        self.widget_2.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
-        self.widget_2.setObjectName("widget_2")
-        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.widget_2)
+        self.horizontalLayout_6.addWidget(self.frame_4)
+        self.frame_2 = QtWidgets.QFrame(parent=self.frame)
+        self.frame_2.setMaximumSize(QtCore.QSize(450, 550))
+        self.frame_2.setStyleSheet("QFrame {\n"
+"    background-color: #1c1b1b;\n"
+"    border-radius: 15px;\n"
+"}\n"
+"\n"
+"QFrame:hover {\n"
+"    background-color: #2B2B2A;\n"
+"}")
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_2)
         self.horizontalLayout_9.setObjectName("horizontalLayout_9")
-        self.easy_card_4 = QtWidgets.QWidget(parent=self.widget_2)
-        self.easy_card_4.setMaximumSize(QtCore.QSize(450, 600))
-        self.easy_card_4.setStyleSheet("background-color:#1c1b1b; border-radius:15px")
+        self.easy_card_4 = QtWidgets.QWidget(parent=self.frame_2)
+        self.easy_card_4.setMaximumSize(QtCore.QSize(350, 450))
+        self.easy_card_4.setStyleSheet("    background-color: transparent;\n"
+"")
         self.easy_card_4.setObjectName("easy_card_4")
         self.verticalLayout_10 = QtWidgets.QVBoxLayout(self.easy_card_4)
         self.verticalLayout_10.setContentsMargins(20, 20, 20, 20)
         self.verticalLayout_10.setSpacing(20)
         self.verticalLayout_10.setObjectName("verticalLayout_10")
         self.widget_7 = QtWidgets.QWidget(parent=self.easy_card_4)
-        self.widget_7.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget_7.setMaximumSize(QtCore.QSize(16777215, 70))
         self.widget_7.setObjectName("widget_7")
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout(self.widget_7)
         self.horizontalLayout_12.setContentsMargins(0, 0, 0, 0)
@@ -204,7 +297,7 @@ class Ui_mainMenu(object):
         self.label_18 = QtWidgets.QLabel(parent=self.widget_7)
         self.label_18.setMinimumSize(QtCore.QSize(100, 0))
         self.label_18.setMaximumSize(QtCore.QSize(120, 30))
-        self.label_18.setStyleSheet("border:1px solid gray; border-radius: 0px;")
+        self.label_18.setStyleSheet("border:1px solid #31445F; border-radius: 0px;")
         self.label_18.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_18.setObjectName("label_18")
         self.verticalLayout_21.addWidget(self.label_18, 0, QtCore.Qt.AlignmentFlag.AlignRight)
@@ -215,6 +308,7 @@ class Ui_mainMenu(object):
         self.label_19 = QtWidgets.QLabel(parent=self.easy_card_4)
         font = QtGui.QFont()
         font.setBold(True)
+        font.setWeight(75)
         self.label_19.setFont(font)
         self.label_19.setStyleSheet("")
         self.label_19.setObjectName("label_19")
@@ -222,6 +316,7 @@ class Ui_mainMenu(object):
         self.label_20 = QtWidgets.QLabel(parent=self.easy_card_4)
         self.label_20.setMaximumSize(QtCore.QSize(1000, 1000))
         self.label_20.setTextFormat(QtCore.Qt.TextFormat.RichText)
+        self.label_20.setWordWrap(True)
         self.label_20.setObjectName("label_20")
         self.verticalLayout_17.addWidget(self.label_20)
         self.label_23 = QtWidgets.QLabel(parent=self.easy_card_4)
@@ -230,19 +325,47 @@ class Ui_mainMenu(object):
         self.verticalLayout_17.addWidget(self.label_23)
         self.button_hard = QtWidgets.QPushButton(parent=self.easy_card_4)
         self.button_hard.setMinimumSize(QtCore.QSize(0, 60))
-        self.button_hard.setStyleSheet("background-color:#0069EC; font-weight: bold;")
+        self.button_hard.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.button_hard.setMouseTracking(False)
+        self.button_hard.setStyleSheet("QPushButton{background-color:#0069EC;\n"
+" font-weight: bold;\n"
+" border-radius:20px;\n"
+"    color: white;\n"
+"    font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"    font-weight: bold;\n"
+"    font-style: italic;\n"
+"    letter-spacing: -0.025em;\n"
+"font-size:16px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color:#0183FF;\n"
+"}\n"
+"")
         self.button_hard.setObjectName("button_hard")
         self.verticalLayout_17.addWidget(self.button_hard)
         self.verticalLayout_10.addLayout(self.verticalLayout_17)
         self.horizontalLayout_9.addWidget(self.easy_card_4)
-        self.horizontalLayout.addWidget(self.widget_2)
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_6.addWidget(self.frame_2)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_6)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
-        self.verticalLayout.setStretch(0, 1)
-        self.verticalLayout.setStretch(1, 6)
-        self.verticalLayout.setStretch(2, 1)
+        self.frame_6 = QtWidgets.QFrame(parent=self.frame)
+        self.frame_6.setMinimumSize(QtCore.QSize(0, 100))
+        self.frame_6.setStyleSheet("background-color:#0E0E0E;\n"
+"border-radius:20px")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.horizontalLayout_3.addWidget(self.frame_6)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_5.setStretch(0, 1)
+        self.verticalLayout_5.setStretch(1, 2)
+        self.verticalLayout_4.addWidget(self.frame, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout.addLayout(self.verticalLayout_4)
+        self.verticalLayout.setStretch(0, 6)
 
         self.retranslateUi(mainMenu)
         QtCore.QMetaObject.connectSlotsByName(mainMenu)
@@ -250,18 +373,21 @@ class Ui_mainMenu(object):
     def retranslateUi(self, mainMenu):
         _translate = QtCore.QCoreApplication.translate
         mainMenu.setWindowTitle(_translate("mainMenu", "Speed Sketch"))
-        self.label_14.setText(_translate("mainMenu", "1.0+ XP"))
+        self.label.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:72pt; font-weight:792; font-style:italic; color:#ffffff; text-transform:uppercase;\">DIFFICULTY</span></p></body></html>"))
+        self.label_2.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">SELECT YOUR VELOCITY.</span></p></body></html>"))
+        self.label_14.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-weight:600; color:#60a4fb;\">1.0+ XP</span></p></body></html>"))
         self.label_11.setText(_translate("mainMenu", "<html><head/><body><p><span style=\"font-family: sans-serif; font-size: 32pt; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;\">EASY</span></p></body></html>"))
-        self.label_12.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Relaxed timers and basic prompts. </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Perfect for warmups and casual </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">sketches.</span></p></body></html>"))
+        self.label_12.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Relaxed timers and basic prompts. Perfect for warmups and casual sketches.</span></p></body></html>"))
         self.label_13.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7c9cf8;\">✔</span><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7da5e7;\"> 60 Seconds Initial time</span></p></body></html>"))
         self.button_easy.setText(_translate("mainMenu", "SELECT EASY"))
-        self.label_15.setText(_translate("mainMenu", "1.0+ XP"))
+        self.label_15.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-weight:600; color:#60a4fb;\">1.0+ XP</span></p></body></html>"))
         self.label_16.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:32pt; font-weight:800; color:#ffffff; text-transform:uppercase;\">MEDIUM</span></p></body></html>"))
-        self.label_17.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Relaxed timers and basic prompts. </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Perfect for warmups and casual </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">sketches.</span></p></body></html>"))
+        self.label_17.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">The sweet spot. Balanced timers with complex objects and dynamic themes.</span></p>"))
         self.label_22.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7c9cf8;\">✔</span><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7da5e7;\"> 60 Seconds Initial time</span></p></body></html>"))
-        self.button_medium.setText(_translate("mainMenu", "SELECT EASY"))
-        self.label_18.setText(_translate("mainMenu", "1.0+ XP"))
+        self.button_medium.setText(_translate("mainMenu", "SELECT MEDIUM"))
+        self.label_18.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-weight:600; color:#60a4fb;\">1.0+ XP</span></p></body></html>"))
         self.label_19.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:32pt; font-weight:800; color:#ffffff; text-transform:uppercase;\">HARD</span></p></body></html>"))
-        self.label_20.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Relaxed timers and basic prompts. </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Perfect for warmups and casual </span></p><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">sketches.</span></p></body></html>"))
+        self.label_20.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Maximum intensity. Abstract prompts and ultra-fast timers. No mistakes allowed.\n"
+"</span></p></body></html>"))
         self.label_23.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7c9cf8;\">✔</span><span style=\" font-family:\'sans-serif\'; font-size:14pt; color:#7da5e7;\"> 60 Seconds Initial time</span></p></body></html>"))
-        self.button_hard.setText(_translate("mainMenu", "SELECT EASY"))
+        self.button_hard.setText(_translate("mainMenu", "SELECT HARD"))

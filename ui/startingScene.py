@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/startingScene.ui'
+# Form implementation generated from reading ui file 'ui\startingScene.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -12,7 +12,7 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_startingScene(object):
     def setupUi(self, startingScene):
         startingScene.setObjectName("startingScene")
-        startingScene.resize(1060, 590)
+        startingScene.resize(1060, 238)
         icon = QtGui.QIcon.fromTheme("applications-games")
         startingScene.setWindowIcon(icon)
         startingScene.setAutoFillBackground(False)
@@ -84,7 +84,7 @@ class Ui_startingScene(object):
         item = QtWidgets.QListWidgetItem()
         item.setCheckState(QtCore.Qt.CheckState.Checked)
         self.listwidget_categories.addItem(item)
-        self.verticalLayout.addWidget(self.listwidget_categories)
+        self.verticalLayout.addWidget(self.listwidget_categories, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.button_start = QtWidgets.QPushButton(parent=startingScene)
