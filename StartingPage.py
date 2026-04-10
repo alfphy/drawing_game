@@ -15,5 +15,5 @@ class StartingPage(qtw.QWidget):
     def button_start_click(self):
         self.parent.ui.stack_pages.setCurrentIndex(2)
 
-        self.parent.playPage.start_timer(30)
+        self.parent.playPage.start_timer(5)
 
