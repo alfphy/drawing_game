@@ -1,4 +1,3 @@
-# word_lists.py
 
 
 def get_phrase(category_index, phrase_index):
@@ -13,11 +12,11 @@ def get_phrase(category_index, phrase_index):
     #     prefix = "a sketch of a"
     # else:
     #     prefix = "a drawing of"
-    return category_name, f"{phrases_list[str(category_name)][phrase_index]}"
+    return category_name, f"{phrases_list_easy[str(category_name)][phrase_index]}"
 categories = ["Animals", "Flowers", "Emoji", "Vehicles"]
 
 #easy
-phrases_list = {
+phrases_list_easy = {
     "Animals": [
         "a cat sleeping",
         "a dog sitting",
@@ -110,3 +109,6 @@ phrases_list = {
         "a taxi cab"
     ]
 }
+
+phrases_list_hard = {}
+phrases_list_medium = {}

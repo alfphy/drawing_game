@@ -1,13 +1,7 @@
 import PyQt6.QtWidgets as qtw
-from PyQt6 import QtCore, QtGui
 
-import analyzer.clip_process
 import ui.playScene
-import numpy as np
-import analyzer.phrases
-import time
-from PyQt6.QtGui import QColor
-from PyQt6.QtWidgets import QColorDialog, QPushButton
+import ui.resultScene
 
 
 class ResultPage(qtw.QWidget):

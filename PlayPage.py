@@ -4,10 +4,8 @@ from PyQt6 import QtCore, QtGui
 import analyzer.clip_process
 import ui.playScene
 import numpy as np
-import analyzer.phrases
-import time
-from PyQt6.QtGui import QColor
-from PyQt6.QtWidgets import QColorDialog, QPushButton
+import roundsetting.phrases
+from PyQt6.QtWidgets import QColorDialog
 
 import random
 class DrawingCanvas(qtw.QWidget):
@@ -103,7 +101,7 @@ class PlayPage(qtw.QWidget):
         phrase_index = random.randint(0,19)
         category_index = random.randint(0,4)
 
-        category_name, phrase = analyzer.phrases.get_phrase(category_index, phrase_index)
+        category_name, phrase = roundsetting.phrases.get_phrase(category_index, phrase_index)
 
         self.ui.label_phrase.setText(phrase)
         self.ui.label_category.setText(str(category_name))
