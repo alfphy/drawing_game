@@ -164,6 +164,7 @@ class PlayPage(qtw.QWidget):
         print("Generating result")
         score = analyzer.clip_process.score_drawing('draw.png',str(self.ui.label_phrase.text()))
 
+        """
         print("New phrase coming...")
         self.canvas.clear()
         phrase_index = random.randint(0, 19)
@@ -174,7 +175,9 @@ class PlayPage(qtw.QWidget):
         self.ui.label_phrase.setText(phrase)
         self.ui.label_category.setText(str(category_name))
         self.start_timer(30)
+        """
 
+        self.parent.ui.stack_pages.setCurrentIndex(3)
 
 
     def get_remaining_time(self):
