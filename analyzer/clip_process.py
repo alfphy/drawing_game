@@ -1,3 +1,5 @@
+import time
+
 from transformers import CLIPProcessor, CLIPModel
 from PIL import Image
 import torch
@@ -29,7 +31,7 @@ def score_drawing(image, challenge_phrase, category=None):
 
     # Combine all prompts
     all_prompts = [positive] + negatives
-
+    start_time = time.time()
     # Process image and text
     inputs = processor(text=all_prompts, images=image, return_tensors="pt", padding=True)
     outputs = model(**inputs)
@@ -54,6 +56,9 @@ def score_drawing(image, challenge_phrase, category=None):
     # Map to 0-100 (calibrated range ~ -0.05 to 0.20)
     score = max(0, min(100, calibrated * 500))
 
+    end_time = time.time()
+    inference_time =( end_time - start_time ) * 1000
+    print(f"inference time: {inference_time}ms")
     print(f"Target: {positive}")
     print(f"Positive similarity: {pos_sim:.4f}")
     print(f"Negative avg: {neg_sim:.4f}")
