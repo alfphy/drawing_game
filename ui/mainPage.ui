@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1529</width>
-    <height>905</height>
+    <width>1646</width>
+    <height>777</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -230,24 +230,27 @@ QFrame:hover {
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_13">
                      <item>
-                      <widget class="QWidget" name="icon_easy_5" native="true">
+                      <widget class="QLabel" name="label_9">
                        <property name="minimumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
-                       <property name="autoFillBackground">
-                        <bool>false</bool>
+                       <property name="text">
+                        <string/>
                        </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color:#7da5e7; border-radius:25px</string>
+                       <property name="pixmap">
+                        <pixmap resource="../assets/icons.qrc">:/difficulty/child_care.svg</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
                        </property>
                       </widget>
                      </item>
@@ -300,7 +303,7 @@ QFrame:hover {
                      <string notr="true"/>
                     </property>
                     <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32pt; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;&quot;&gt;EASY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot;font-family: sans-serif; font-size: 32pt; font-weight: 500; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;&quot;&gt;EASY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
                   </item>
@@ -458,24 +461,27 @@ QFrame:hover {
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_15">
                      <item>
-                      <widget class="QWidget" name="icon_easy_7" native="true">
+                      <widget class="QLabel" name="label_10">
                        <property name="minimumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
-                       <property name="autoFillBackground">
-                        <bool>false</bool>
+                       <property name="text">
+                        <string/>
                        </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color:#7da5e7; border-radius:25px</string>
+                       <property name="pixmap">
+                        <pixmap resource="../assets/icons.qrc">:/difficulty/bolt.svg</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
                        </property>
                       </widget>
                      </item>
@@ -527,7 +533,7 @@ QFrame:hover {
                      <string notr="true"/>
                     </property>
                     <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:800; color:#ffffff; text-transform:uppercase;&quot;&gt;MEDIUM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:500; color:#ffffff; text-transform:uppercase;&quot;&gt;MEDIUM&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
                   </item>
@@ -677,24 +683,27 @@ QFrame:hover {
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_16">
                      <item>
-                      <widget class="QWidget" name="icon_easy_8" native="true">
+                      <widget class="QLabel" name="label_21">
                        <property name="minimumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>60</width>
-                         <height>60</height>
+                         <width>48</width>
+                         <height>48</height>
                         </size>
                        </property>
-                       <property name="autoFillBackground">
-                        <bool>false</bool>
+                       <property name="text">
+                        <string/>
                        </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color:#7da5e7; border-radius:25px</string>
+                       <property name="pixmap">
+                        <pixmap resource="../assets/icons.qrc">:/difficulty/fire_department.svg</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
                        </property>
                       </widget>
                      </item>
@@ -746,7 +755,7 @@ QFrame:hover {
                      <string notr="true"/>
                     </property>
                     <property name="text">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:800; color:#ffffff; text-transform:uppercase;&quot;&gt;HARD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:32pt; font-weight:500; color:#ffffff; text-transform:uppercase;&quot;&gt;HARD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                    </widget>
                   </item>
@@ -829,18 +838,29 @@ background-color:#0183FF;
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item>
-           <widget class="QFrame" name="frame_6">
+         <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0">
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="frame_7">
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>100</height>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color:#0E0E0E;
-border-radius:20px</string>
+             <string notr="true">background-color:#1c1b1b;
+border-radius:20px;
+border-left:2px solid #494F60;
+</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -848,6 +868,183 @@ border-radius:20px</string>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>30</y>
+               <width>161</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:#7da5e7; font-family: &quot;Arial&quot;, &quot;Helvetica&quot;, sans-serif;
+border:none;
+
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Personal Best&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_6">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>50</y>
+               <width>231</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:25pt; font-weight:800; color:#ffffff;&quot;&gt;5s | 90%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="frame_5">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:#1c1b1b;
+border-radius:20px;
+border-left:2px solid #494F60;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>30</y>
+               <width>161</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:#7da5e7; font-family: &quot;Arial&quot;, &quot;Helvetica&quot;, sans-serif;
+border:none;
+
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Average Score&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>50</y>
+               <width>231</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:25pt; font-weight:800; color:#ffffff;&quot;&gt;20s | 75%&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignTop">
+           <widget class="QFrame" name="frame_6">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>120</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:#1c1b1b;
+border-radius:20px;
+border-left:2px solid #5A4E13;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>30</y>
+               <width>161</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:#E3BC03; font-family: &quot;Arial&quot;, &quot;Helvetica&quot;, sans-serif;
+border:none;
+
+</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Best Win Streak&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_8">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>50</y>
+               <width>231</width>
+               <height>50</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border:none;</string>
+             </property>
+             <property name="text">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:25pt; font-weight:800; color:#ffffff;&quot;&gt;12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -859,6 +1056,9 @@ border-radius:20px</string>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../assets/background.qrc"/>
+  <include location="../assets/icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

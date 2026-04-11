@@ -7,6 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+import resources_rc.background_rc
+import resources_rc.icons_rc
 
 
 class Ui_resultPage(object):

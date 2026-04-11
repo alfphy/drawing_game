@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="difficulty">
+    <file>bolt.svg</file>
+    <file>child_care.svg</file>
+    <file>fire_department.svg</file>
+  </qresource>
+  <qresource prefix="category">
+    <file>emoji.svg</file>
+    <file>vehicle.svg</file>
+    <file>flowers.svg</file>
+    <file>circle_checked.svg</file>
+    <file>animals.svg</file>
+  </qresource>
+</RCC>

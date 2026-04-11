@@ -7,12 +7,14 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+import resources_rc.background_rc
+import resources_rc.icons_rc
 
 
 class Ui_ContainerForm(object):
     def setupUi(self, ContainerForm):
         ContainerForm.setObjectName("ContainerForm")
-        ContainerForm.resize(1090, 608)
+        ContainerForm.resize(1368, 608)
         icon = QtGui.QIcon.fromTheme("applications-games")
         ContainerForm.setWindowIcon(icon)
         ContainerForm.setStyleSheet("background-color:black;\n"

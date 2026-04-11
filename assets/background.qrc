@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="category">
+    <file>vehicle_sketch.jfif</file>
+    <file>emoji_sketch.jfif</file>
+    <file>lion_sketch.jfif</file>
+    <file>flowers_sketch.jfif</file>
+  </qresource>
+</RCC>

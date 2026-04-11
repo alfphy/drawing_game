@@ -7,92 +7,385 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
+import resources_rc.background_rc
+import resources_rc.icons_rc
 
 
 class Ui_startingScene(object):
     def setupUi(self, startingScene):
         startingScene.setObjectName("startingScene")
-        startingScene.resize(1060, 238)
+        startingScene.resize(1420, 843)
         icon = QtGui.QIcon.fromTheme("applications-games")
         startingScene.setWindowIcon(icon)
         startingScene.setAutoFillBackground(False)
-        startingScene.setStyleSheet("background-color: rgb(107, 122, 245);")
+        startingScene.setStyleSheet("background-color:#161616; color:white;")
         self.verticalLayout = QtWidgets.QVBoxLayout(startingScene)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_4.setSizeConstraint(QtWidgets.QLayout.SizeConstraint.SetDefaultConstraint)
+        self.verticalLayout_4.setContentsMargins(0, -1, 0, -1)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frame = QtWidgets.QFrame(parent=startingScene)
-        self.frame.setStyleSheet("background-color: rgb(107, 122, 245);")
+        self.frame.setMinimumSize(QtCore.QSize(1400, 500))
+        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame.setStyleSheet("background-color:transparent;")
+        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
-        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout_3.setObjectName("verticalLayout_3")
-        self.label_difficulty = QtWidgets.QLabel(parent=self.frame)
-        self.label_difficulty.setMinimumSize(QtCore.QSize(500, 70))
-        self.label_difficulty.setMaximumSize(QtCore.QSize(16777215, 40))
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(22)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_difficulty.setFont(font)
-        self.label_difficulty.setStyleSheet("color: rgb(255, 255, 255);\n"
-"padding: 0%;\n"
-"")
-        self.label_difficulty.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_difficulty.setObjectName("label_difficulty")
-        self.verticalLayout_3.addWidget(self.label_difficulty, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.verticalLayout.addWidget(self.frame)
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
-        self.listwidget_categories = QtWidgets.QListWidget(parent=startingScene)
-        self.listwidget_categories.setMinimumSize(QtCore.QSize(200, 50))
-        self.listwidget_categories.setMaximumSize(QtCore.QSize(200, 300))
-        self.listwidget_categories.setFocusPolicy(QtCore.Qt.FocusPolicy.NoFocus)
-        self.listwidget_categories.setAutoFillBackground(True)
-        self.listwidget_categories.setStyleSheet("\n"
-"\n"
-"\n"
-"QListWidget {\n"
-"         background-color: rgb(255, 197, 66);\n"
-"        border: 2px solid #3d3d3d;\n"
-"        border-radius: 8px;\n"
-"        padding: 5px;\n"
-"        color: #ffffff;\n"
-"        font-size: 14px;\n"
-"    }\n"
-"    QListWidget::item {\n"
-"        padding: 10px;\n"
-"        border-bottom: 1px solid #3d3d3d;\n"
-"        border-radius: 4px;\n"
-"    }\n"
-"    QListWidget::item:hover {\n"
-"        background-color: #3d3d3d;\n"
-"    }\n"
-"QListWidget::item:selected {\n"
-"        background-color: #2b2b2b;\n"
-"        color: white;\n"
-"    }")
-        self.listwidget_categories.setObjectName("listwidget_categories")
-        item = QtWidgets.QListWidgetItem()
-        item.setCheckState(QtCore.Qt.CheckState.Checked)
-        self.listwidget_categories.addItem(item)
-        item = QtWidgets.QListWidgetItem()
-        item.setCheckState(QtCore.Qt.CheckState.Checked)
-        self.listwidget_categories.addItem(item)
-        item = QtWidgets.QListWidgetItem()
-        item.setCheckState(QtCore.Qt.CheckState.Checked)
-        self.listwidget_categories.addItem(item)
-        item = QtWidgets.QListWidgetItem()
-        item.setCheckState(QtCore.Qt.CheckState.Checked)
-        self.listwidget_categories.addItem(item)
-        self.verticalLayout.addWidget(self.listwidget_categories, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout_5.setContentsMargins(20, -1, 20, -1)
+        self.verticalLayout_5.setSpacing(20)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SizeConstraint.SetFixedSize)
+        self.horizontalLayout.setContentsMargins(-1, -1, -1, 0)
         self.horizontalLayout.setObjectName("horizontalLayout")
-        self.button_start = QtWidgets.QPushButton(parent=startingScene)
-        self.button_start.setMinimumSize(QtCore.QSize(200, 60))
-        self.button_start.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.widget = QtWidgets.QWidget(parent=self.frame)
+        self.widget.setMinimumSize(QtCore.QSize(700, 150))
+        self.widget.setMaximumSize(QtCore.QSize(1650, 150))
+        self.widget.setObjectName("widget")
+        self.label = QtWidgets.QLabel(parent=self.widget)
+        self.label.setGeometry(QtCore.QRect(9, 35, 1491, 106))
+        self.label.setMinimumSize(QtCore.QSize(0, 100))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.label.setStyleSheet("border:none; background-color:transparent;")
+        self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.label.setObjectName("label")
+        self.label_2 = QtWidgets.QLabel(parent=self.widget)
+        self.label_2.setGeometry(QtCore.QRect(30, 30, 261, 20))
+        self.label_2.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.label_2.setStyleSheet("color:#7da5e7; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"")
+        self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeading|QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout.addWidget(self.widget, 0, QtCore.Qt.AlignmentFlag.AlignBottom)
+        self.verticalLayout_5.addLayout(self.horizontalLayout)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setContentsMargins(-1, 20, -1, -1)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.animals_card = QtWidgets.QWidget(parent=self.frame)
+        self.animals_card.setMinimumSize(QtCore.QSize(0, 200))
+        self.animals_card.setMaximumSize(QtCore.QSize(16777215, 200))
+        self.animals_card.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.animals_card.setMouseTracking(False)
+        self.animals_card.setStyleSheet("QWidget{\n"
+"border-radius:10px;\n"
+"background-repeat: no-repeat;\n"
+" background-position: center;\n"
+"    border: 2px solid #0069EC;\n"
+"background-image:url(:/category/lion_sketch.jfif);\n"
+"\n"
+"}\n"
+"\n"
+"QWidget:hover {\n"
+"    border: 2px solid #0069EC;\n"
+"}\n"
+"")
+        self.animals_card.setObjectName("animals_card")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.animals_card)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.widget_6 = QtWidgets.QWidget(parent=self.animals_card)
+        self.widget_6.setStyleSheet("background:none;\n"
+"\n"
+"background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));\n"
+"\n"
+"")
+        self.widget_6.setObjectName("widget_6")
+        self.label_3 = QtWidgets.QLabel(parent=self.widget_6)
+        self.label_3.setGeometry(QtCore.QRect(30, 110, 30, 30))
+        self.label_3.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_3.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_3.setStyleSheet("border:none;background:none;")
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap(":/category/animals.svg"))
+        self.label_3.setScaledContents(True)
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(parent=self.widget_6)
+        self.label_4.setGeometry(QtCore.QRect(30, 150, 151, 31))
+        self.label_4.setStyleSheet("border:none;background:none;")
+        self.label_4.setObjectName("label_4")
+        self.label_checked = QtWidgets.QLabel(parent=self.widget_6)
+        self.label_checked.setGeometry(QtCore.QRect(260, 20, 48, 48))
+        self.label_checked.setMinimumSize(QtCore.QSize(48, 48))
+        self.label_checked.setMaximumSize(QtCore.QSize(48, 48))
+        self.label_checked.setStyleSheet("background:-none;\n"
+"background-color:#0068ED;\n"
+"\n"
+"padding:5px;\n"
+"")
+        self.label_checked.setText("")
+        self.label_checked.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked.setScaledContents(True)
+        self.label_checked.setObjectName("label_checked")
+        self.horizontalLayout_2.addWidget(self.widget_6)
+        self.horizontalLayout_3.addWidget(self.animals_card, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.flowers_card = QtWidgets.QWidget(parent=self.frame)
+        self.flowers_card.setMinimumSize(QtCore.QSize(0, 200))
+        self.flowers_card.setMaximumSize(QtCore.QSize(16777215, 300))
+        self.flowers_card.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.flowers_card.setStyleSheet("QWidget{\n"
+"border-radius:10px;\n"
+"background-repeat: no-repeat;\n"
+" background-position: center;\n"
+"    border: 2px solid #0069EC;\n"
+"background-image:url(:/category/flowers_sketch.jfif);\n"
+"\n"
+"}\n"
+"\n"
+"QWidget:hover {\n"
+"    border: 2px solid #0069EC;\n"
+"}\n"
+"")
+        self.flowers_card.setObjectName("flowers_card")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout(self.flowers_card)
+        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.widget_8 = QtWidgets.QWidget(parent=self.flowers_card)
+        self.widget_8.setStyleSheet("background:none;\n"
+"background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));\n"
+"\n"
+"")
+        self.widget_8.setObjectName("widget_8")
+        self.label_7 = QtWidgets.QLabel(parent=self.widget_8)
+        self.label_7.setGeometry(QtCore.QRect(30, 110, 30, 30))
+        self.label_7.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_7.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_7.setStyleSheet("border:none;background:none;")
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap(":/category/flowers.svg"))
+        self.label_7.setScaledContents(True)
+        self.label_7.setObjectName("label_7")
+        self.label_8 = QtWidgets.QLabel(parent=self.widget_8)
+        self.label_8.setGeometry(QtCore.QRect(30, 150, 151, 31))
+        self.label_8.setStyleSheet("border:none;background:none;")
+        self.label_8.setObjectName("label_8")
+        self.label_checked_3 = QtWidgets.QLabel(parent=self.widget_8)
+        self.label_checked_3.setGeometry(QtCore.QRect(260, 20, 48, 48))
+        self.label_checked_3.setMinimumSize(QtCore.QSize(48, 48))
+        self.label_checked_3.setMaximumSize(QtCore.QSize(48, 48))
+        self.label_checked_3.setStyleSheet("background:-none;\n"
+"background-color:#0068ED;\n"
+"\n"
+"padding:5px;\n"
+"")
+        self.label_checked_3.setText("")
+        self.label_checked_3.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_3.setScaledContents(True)
+        self.label_checked_3.setObjectName("label_checked_3")
+        self.horizontalLayout_6.addWidget(self.widget_8)
+        self.horizontalLayout_3.addWidget(self.flowers_card, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.vehicles_card = QtWidgets.QWidget(parent=self.frame)
+        self.vehicles_card.setMinimumSize(QtCore.QSize(0, 200))
+        self.vehicles_card.setMaximumSize(QtCore.QSize(16777215, 300))
+        self.vehicles_card.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.vehicles_card.setStyleSheet("QWidget{\n"
+"border-radius:10px;\n"
+"background-repeat: no-repeat;\n"
+" background-position: center;\n"
+"    border: 2px solid #0069EC;\n"
+"background-image:url(:/category/vehicle_sketch.jfif);\n"
+"\n"
+"}\n"
+"\n"
+"QWidget:hover {\n"
+"    border: 2px solid #0069EC;\n"
+"}\n"
+"")
+        self.vehicles_card.setObjectName("vehicles_card")
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout(self.vehicles_card)
+        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7.setSpacing(0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.widget_9 = QtWidgets.QWidget(parent=self.vehicles_card)
+        self.widget_9.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.ArrowCursor))
+        self.widget_9.setStyleSheet("background:none;\n"
+"background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));\n"
+"\n"
+"")
+        self.widget_9.setObjectName("widget_9")
+        self.label_9 = QtWidgets.QLabel(parent=self.widget_9)
+        self.label_9.setGeometry(QtCore.QRect(30, 110, 30, 30))
+        self.label_9.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_9.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_9.setStyleSheet("border:none;background:none;")
+        self.label_9.setText("")
+        self.label_9.setPixmap(QtGui.QPixmap(":/category/vehicle.svg"))
+        self.label_9.setScaledContents(True)
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(parent=self.widget_9)
+        self.label_10.setGeometry(QtCore.QRect(30, 150, 151, 31))
+        self.label_10.setStyleSheet("border:none;background:none;")
+        self.label_10.setObjectName("label_10")
+        self.label_checked_4 = QtWidgets.QLabel(parent=self.widget_9)
+        self.label_checked_4.setGeometry(QtCore.QRect(260, 20, 48, 48))
+        self.label_checked_4.setMinimumSize(QtCore.QSize(48, 48))
+        self.label_checked_4.setMaximumSize(QtCore.QSize(48, 48))
+        self.label_checked_4.setStyleSheet("background:-none;\n"
+"background-color:#0068ED;\n"
+"\n"
+"padding:5px;\n"
+"")
+        self.label_checked_4.setText("")
+        self.label_checked_4.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_4.setScaledContents(True)
+        self.label_checked_4.setObjectName("label_checked_4")
+        self.horizontalLayout_7.addWidget(self.widget_9)
+        self.horizontalLayout_3.addWidget(self.vehicles_card, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.emojis_card = QtWidgets.QWidget(parent=self.frame)
+        self.emojis_card.setMinimumSize(QtCore.QSize(0, 200))
+        self.emojis_card.setMaximumSize(QtCore.QSize(9000, 300))
+        self.emojis_card.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.emojis_card.setStyleSheet("QWidget{\n"
+"border-radius:10px;\n"
+"background-repeat: no-repeat;\n"
+" background-position: center;\n"
+"    border: 2px solid #0069EC;\n"
+"background-image:url(:/category/emoji_sketch.jfif);\n"
+"\n"
+"}\n"
+"\n"
+"QWidget:hover {\n"
+"    border: 2px solid #0069EC;\n"
+"}\n"
+"")
+        self.emojis_card.setObjectName("emojis_card")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.emojis_card)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.widget_10 = QtWidgets.QWidget(parent=self.emojis_card)
+        self.widget_10.setStyleSheet("background:none;\n"
+"background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));\n"
+"\n"
+"")
+        self.widget_10.setObjectName("widget_10")
+        self.label_11 = QtWidgets.QLabel(parent=self.widget_10)
+        self.label_11.setGeometry(QtCore.QRect(30, 110, 30, 30))
+        self.label_11.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_11.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_11.setStyleSheet("border:none;background:none;")
+        self.label_11.setText("")
+        self.label_11.setPixmap(QtGui.QPixmap(":/category/emoji.svg"))
+        self.label_11.setScaledContents(True)
+        self.label_11.setObjectName("label_11")
+        self.label_12 = QtWidgets.QLabel(parent=self.widget_10)
+        self.label_12.setGeometry(QtCore.QRect(30, 150, 151, 31))
+        self.label_12.setStyleSheet("border:none;background:none;")
+        self.label_12.setObjectName("label_12")
+        self.label_checked_5 = QtWidgets.QLabel(parent=self.widget_10)
+        self.label_checked_5.setGeometry(QtCore.QRect(260, 20, 48, 48))
+        self.label_checked_5.setMinimumSize(QtCore.QSize(48, 48))
+        self.label_checked_5.setMaximumSize(QtCore.QSize(48, 48))
+        self.label_checked_5.setStyleSheet("background:-none;\n"
+"background-color:#0068ED;\n"
+"\n"
+"padding:5px;\n"
+"")
+        self.label_checked_5.setText("")
+        self.label_checked_5.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_5.setScaledContents(True)
+        self.label_checked_5.setObjectName("label_checked_5")
+        self.horizontalLayout_8.addWidget(self.widget_10)
+        self.horizontalLayout_3.addWidget(self.emojis_card, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout_5.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setContentsMargins(-1, 60, -1, -1)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.widget_2 = QtWidgets.QWidget(parent=self.frame)
+        self.widget_2.setMinimumSize(QtCore.QSize(500, 300))
+        self.widget_2.setStyleSheet("border-top:1px solid #2B2B2A;\n"
+"")
+        self.widget_2.setObjectName("widget_2")
+        self.horizontalLayout_14 = QtWidgets.QHBoxLayout(self.widget_2)
+        self.horizontalLayout_14.setObjectName("horizontalLayout_14")
+        self.widget_4 = QtWidgets.QWidget(parent=self.widget_2)
+        self.widget_4.setMinimumSize(QtCore.QSize(0, 100))
+        self.widget_4.setMaximumSize(QtCore.QSize(600, 300))
+        self.widget_4.setStyleSheet("background:transparent;\n"
+"border:none;")
+        self.widget_4.setObjectName("widget_4")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.widget_4)
+        self.verticalLayout_6.setSpacing(0)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.horizontalLayout_15 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_15.setSpacing(0)
+        self.horizontalLayout_15.setObjectName("horizontalLayout_15")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_9.setSpacing(0)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        self.label_13 = QtWidgets.QLabel(parent=self.widget_4)
+        self.label_13.setMinimumSize(QtCore.QSize(0, 0))
+        self.label_13.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.label_13.setStyleSheet("color:#7da5e7; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"padding:10px;\n"
+"margin-right:10px\n"
+";")
+        self.label_13.setWordWrap(False)
+        self.label_13.setObjectName("label_13")
+        self.horizontalLayout_9.addWidget(self.label_13, 0, QtCore.Qt.AlignmentFlag.AlignRight|QtCore.Qt.AlignmentFlag.AlignVCenter)
+        self.horizontalLayout_15.addLayout(self.horizontalLayout_9)
+        self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_13.setSpacing(0)
+        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
+        self.label_selected = QtWidgets.QLabel(parent=self.widget_4)
+        self.label_selected.setMinimumSize(QtCore.QSize(300, 0))
+        self.label_selected.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.label_selected.setStyleSheet("color:#7da5e7; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"padding:12px;\n"
+"margin-right:200px;\n"
+"\n"
+"")
+        self.label_selected.setTextFormat(QtCore.Qt.TextFormat.AutoText)
+        self.label_selected.setWordWrap(True)
+        self.label_selected.setObjectName("label_selected")
+        self.horizontalLayout_13.addWidget(self.label_selected, 0, QtCore.Qt.AlignmentFlag.AlignLeft|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.horizontalLayout_15.addLayout(self.horizontalLayout_13)
+        self.horizontalLayout_15.setStretch(0, 1)
+        self.horizontalLayout_15.setStretch(1, 1)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_15)
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_10.setContentsMargins(-1, 20, -1, -1)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.button_start = QtWidgets.QPushButton(parent=self.widget_4)
+        self.button_start.setMinimumSize(QtCore.QSize(300, 70))
+        self.button_start.setMaximumSize(QtCore.QSize(400, 70))
+        self.button_start.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.button_start.setStyleSheet("QPushButton{background-color:#E9C400;\n"
+" font-weight: bold;\n"
+"   border-top-left-radius: 15px;\n"
+"    border-top-right-radius: 8px;\n"
+"    border-bottom-left-radius: 8px;\n"
+"    border-bottom-right-radius: 15px;\n"
+"    color: black;\n"
+"    font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"    font-weight: bold;\n"
+"    font-style: italic;\n"
+"    letter-spacing: -0.025em;\n"
+"font-size:16px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color:#FFD901;\n"
+"}\n"
+"")
         self.button_start.setObjectName("button_start")
-        self.horizontalLayout.addWidget(self.button_start, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.horizontalLayout_10.addWidget(self.button_start, 0, QtCore.Qt.AlignmentFlag.AlignTop)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_10)
+        self.verticalLayout_6.setStretch(1, 1)
+        self.horizontalLayout_14.addWidget(self.widget_4)
+        self.verticalLayout_3.addWidget(self.widget_2)
+        self.verticalLayout_5.addLayout(self.verticalLayout_3)
+        self.verticalLayout_5.setStretch(0, 1)
+        self.verticalLayout_5.setStretch(1, 1)
+        self.verticalLayout_5.setStretch(2, 2)
+        self.verticalLayout_4.addWidget(self.frame, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout.addLayout(self.verticalLayout_4)
 
         self.retranslateUi(startingScene)
         QtCore.QMetaObject.connectSlotsByName(startingScene)
@@ -100,16 +393,12 @@ class Ui_startingScene(object):
     def retranslateUi(self, startingScene):
         _translate = QtCore.QCoreApplication.translate
         startingScene.setWindowTitle(_translate("startingScene", "Speed Sketch"))
-        self.label_difficulty.setText(_translate("startingScene", "Easy"))
-        __sortingEnabled = self.listwidget_categories.isSortingEnabled()
-        self.listwidget_categories.setSortingEnabled(False)
-        item = self.listwidget_categories.item(0)
-        item.setText(_translate("startingScene", "Animals"))
-        item = self.listwidget_categories.item(1)
-        item.setText(_translate("startingScene", "Flowers"))
-        item = self.listwidget_categories.item(2)
-        item.setText(_translate("startingScene", "Emoji"))
-        item = self.listwidget_categories.item(3)
-        item.setText(_translate("startingScene", "Vehicle"))
-        self.listwidget_categories.setSortingEnabled(__sortingEnabled)
-        self.button_start.setText(_translate("startingScene", "Start"))
+        self.label.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:72pt; font-weight:792; font-style:italic; color:#ffffff; text-transform:uppercase;\">CHOOSE</span><span style=\" font-family:\'sans-serif\'; font-size:72pt; font-weight:792; font-style:italic; color:#b0c6ff; text-transform:uppercase;\">CATEGORY</span></p></body></html>"))
+        self.label_2.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">SELECT SKETCHING SUBJECT.</span></p></body></html>"))
+        self.label_4.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Animals</span></p></body></html>"))
+        self.label_8.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Flowers</span></p></body></html>"))
+        self.label_10.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Vehicles</span></p></body></html>"))
+        self.label_12.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Emojis</span></p></body></html>"))
+        self.label_13.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">🛈 Selection:</span></p></body></html>"))
+        self.label_selected.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:12pt; font-weight:600; color:#ffffff;\">Animals, Flowers, Vehicles, Emojis</span></p></body></html>"))
+        self.button_start.setText(_translate("startingScene", "START GAME"))
