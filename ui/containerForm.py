@@ -14,11 +14,10 @@ import resources_rc.icons_rc
 class Ui_ContainerForm(object):
     def setupUi(self, ContainerForm):
         ContainerForm.setObjectName("ContainerForm")
-        ContainerForm.resize(1368, 608)
+        ContainerForm.resize(1563, 785)
         icon = QtGui.QIcon.fromTheme("applications-games")
         ContainerForm.setWindowIcon(icon)
-        ContainerForm.setStyleSheet("background-color:black;\n"
-"")
+        ContainerForm.setStyleSheet("background-color:#161616; color:white;")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(ContainerForm)
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_2.setSpacing(10)

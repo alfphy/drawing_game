@@ -17,6 +17,7 @@ class Ui_playScene(object):
         playScene.resize(620, 483)
         icon = QtGui.QIcon.fromTheme("applications-games")
         playScene.setWindowIcon(icon)
+        playScene.setStyleSheet("background-color:#161616; color:white;")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(playScene)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.verticalLayout = QtWidgets.QVBoxLayout()

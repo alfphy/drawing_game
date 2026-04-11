@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1368</width>
-    <height>608</height>
+    <width>1563</width>
+    <height>785</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,7 @@
     <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:black;
-</string>
+   <string notr="true">background-color:#161616; color:white;</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
    <property name="spacing">

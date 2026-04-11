@@ -17,6 +17,9 @@
    <iconset theme="applications-games">
     <normaloff>../../../.designer/backup</normaloff>../../../.designer/backup</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:#161616; color:white;</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,5">
