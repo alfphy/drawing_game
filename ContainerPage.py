@@ -11,8 +11,11 @@ from StartingPage import StartingPage
 class ContainerPage(qtw.QWidget):
     def __init__(self):
         super().__init__()
+
         self.ui = ui.containerForm.Ui_ContainerForm()
         self.ui.setupUi(self)
+        self.showMaximized()
+
         self.mainPage = MainPage(self)
         self.startingPage = StartingPage(self)
         self.playPage = PlayPage(self)

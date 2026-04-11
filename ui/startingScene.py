@@ -14,7 +14,7 @@ import resources_rc.icons_rc
 class Ui_startingScene(object):
     def setupUi(self, startingScene):
         startingScene.setObjectName("startingScene")
-        startingScene.resize(1420, 843)
+        startingScene.resize(1553, 843)
         icon = QtGui.QIcon.fromTheme("applications-games")
         startingScene.setWindowIcon(icon)
         startingScene.setAutoFillBackground(False)

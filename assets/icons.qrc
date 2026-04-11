@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="difficulty">
+    <file>color_palette.svg</file>
     <file>bolt.svg</file>
     <file>child_care.svg</file>
     <file>fire_department.svg</file>
@@ -10,5 +11,14 @@
     <file>flowers.svg</file>
     <file>circle_checked.svg</file>
     <file>animals.svg</file>
+  </qresource>
+  <qresource prefix="drawing">
+    <file>undo.svg</file>
+    <file>timer.svg</file>
+    <file>pen_selected.svg</file>
+    <file>fill.svg</file>
+    <file>eraser.svg</file>
+    <file>brush.svg</file>
+    <file>pen.svg</file>
   </qresource>
 </RCC>

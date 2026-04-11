@@ -13,6 +13,7 @@ class DrawingCanvas(qtw.QWidget):
         super().__init__()
         self.parent = parent
         self.setMinimumSize(640, 640)
+
         self.image = QtGui.QImage(self.size(), QtGui.QImage.Format.Format_ARGB32)
         self.image.fill(QtCore.Qt.GlobalColor.white)
         self.last_point = None
@@ -104,7 +105,21 @@ class PlayPage(qtw.QWidget):
         category_name, phrase = roundsetting.phrases.get_phrase(category_index, phrase_index)
 
         self.ui.label_phrase.setText(phrase)
+        self.ui.label_phrase.setStyleSheet("""
+ font-family:'sans-serif'; font-size:21pt; font-weight:600; color:#ffffff;
+border:none;
+background:transparent;
+""")
+
         self.ui.label_category.setText(str(category_name))
+        self.ui.label_category.setStyleSheet("""
+ 
+        color:#7da5e7; font-family: "Arial", "Helvetica", sans-serif;
+border:none;
+font-weight:600;
+font-size:12pt
+             
+        """)
         # Timer setup
         self.time_left = 60  # 60 seconds default
         self.timer = QtCore.QTimer()
@@ -118,7 +133,10 @@ class PlayPage(qtw.QWidget):
 
         if color.isValid():
             self.canvas.brush_color = color
-            self.ui.widget_colorselected.setStyleSheet(f"background-color: {color.name()};")
+            self.ui.widget_colorselected.setStyleSheet(f"""background-color: {color.name()}; 
+border: 2px solid white;
+    border-radius: 12px;
+margin:0px; """)
 
     def start_timer(self, seconds=60):
         """Start the countdown timer"""
@@ -146,7 +164,7 @@ class PlayPage(qtw.QWidget):
 
         # Visual warning when time is low
         if self.time_left <= 10:
-            self.ui.label_timer.setStyleSheet("color: red; font-weight: bold;")
+            self.ui.label_timer.setStyleSheet("color: red; font-weight: bold; font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 800; border:none; background:transparent; padding-left:8px;")
 
     def update_timer_display(self):
         """Update the timer label"""

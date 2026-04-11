@@ -20,7 +20,7 @@
   <property name="styleSheet">
    <string notr="true">background-color:#161616; color:white;</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0">
    <property name="spacing">
     <number>10</number>
    </property>
@@ -37,7 +37,10 @@
     <number>0</number>
    </property>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QWidget" name="tab_bar" native="true">
        <property name="autoFillBackground">
@@ -99,27 +102,10 @@ border-radius:20px;
        </layout>
       </widget>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="leftMargin">
-      <number>0</number>
-     </property>
-     <property name="topMargin">
-      <number>0</number>
-     </property>
-     <property name="rightMargin">
-      <number>0</number>
-     </property>
-     <property name="bottomMargin">
-      <number>0</number>
-     </property>
      <item>
       <widget class="QStackedWidget" name="stack_pages">
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
+       <widget class="QWidget" name="page"/>
+       <widget class="QWidget" name="page_2"/>
       </widget>
      </item>
     </layout>
