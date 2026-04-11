@@ -33,7 +33,7 @@ class Ui_ContainerForm(object):
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.tab_bar)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_title = QtWidgets.QLabel(parent=self.tab_bar)
-        self.label_title.setStyleSheet("font: 600 oblique 30pt \"URW Gothic\";\n"
+        self.label_title.setStyleSheet("font: 600 oblique 21pt \"URW Gothic\";\n"
 "border:none;\n"
 "\n"
 "margin-left:10px;\n"
@@ -55,6 +55,8 @@ class Ui_ContainerForm(object):
         self.horizontalLayout_4.addWidget(self.button_menu)
         self.verticalLayout.addWidget(self.tab_bar)
         self.stack_pages = QtWidgets.QStackedWidget(parent=ContainerForm)
+        self.stack_pages.setObjectName("stack_pages")
+
         self.verticalLayout.addWidget(self.stack_pages)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 

@@ -54,7 +54,7 @@
         <item>
          <widget class="QLabel" name="label_title">
           <property name="styleSheet">
-           <string notr="true">font: 600 oblique 30pt &quot;URW Gothic&quot;;
+           <string notr="true">font: 600 oblique 21pt &quot;URW Gothic&quot;;
 border:none;
 
 margin-left:10px;
