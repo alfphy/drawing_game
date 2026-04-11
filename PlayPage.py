@@ -1,6 +1,8 @@
 import PyQt6.QtWidgets as qtw
 from PyQt6 import QtCore, QtGui
+from mpmath import diag
 
+import ResultPage
 import analyzer.clip_process
 import ui.playScene
 import numpy as np
@@ -174,12 +176,11 @@ margin:0px; """)
 
     def times_up(self):
         """Called when timer reaches 0"""
-        self.ui.label_timer.setText("TIME'S UP!")
+        self.ui.label_timer.setText("00:00")
         self.canvas.save_image()
 
         print("Generating result")
         score = analyzer.clip_process.score_drawing('draw.png',str(self.ui.label_phrase.text()))
-
         """
         print("New phrase coming...")
         self.canvas.clear()
@@ -193,7 +194,13 @@ margin:0px; """)
         self.start_timer(30)
         """
 
-        self.parent.ui.stack_pages.setCurrentIndex(3)
+        dialog_result = ResultPage.ResultPage(self)
+
+        dialog_result.exec()
+        dialog_result.move(
+            self.x() + (self.width() - dialog_result.width()) // 2,
+            self.y() + (self.height() - dialog_result.height()) // 2
+        )
 
 
     def get_remaining_time(self):

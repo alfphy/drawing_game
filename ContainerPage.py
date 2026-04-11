@@ -19,11 +19,9 @@ class ContainerPage(qtw.QWidget):
         self.mainPage = MainPage(self)
         self.startingPage = StartingPage(self)
         self.playPage = PlayPage(self)
-        self.resultPage = ResultPage(self)
         self.ui.stack_pages.addWidget(self.mainPage)
         self.ui.stack_pages.addWidget(self.startingPage)
         self.ui.stack_pages.addWidget(self.playPage)
-        self.ui.stack_pages.addWidget(self.resultPage)
         self.ui.stack_pages.setCurrentIndex(0)
 
 app = qtw.QApplication(sys.argv)

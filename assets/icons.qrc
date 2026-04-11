@@ -5,6 +5,10 @@
     <file>child_care.svg</file>
     <file>fire_department.svg</file>
   </qresource>
+  <qresource prefix="result">
+    <file>star_rate.svg</file>
+    <file>star_unrated.svg</file>
+  </qresource>
   <qresource prefix="category">
     <file>emoji.svg</file>
     <file>vehicle.svg</file>

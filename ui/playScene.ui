@@ -151,7 +151,8 @@ margin-left:5px;</string>
   font-weight: 800;       
 border:none;
 background:transparent;
-padding-left:8px;</string>
+margin-left:8px;
+</string>
               </property>
               <property name="text">
                <string>00:00</string>
@@ -268,7 +269,8 @@ border:1px solid #262627;</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">color:#7da5e7; font-family: &quot;Arial&quot;, &quot;Helvetica&quot;, sans-serif;
+              <string notr="true">color:#7da5e7; 
+font-family: &quot;Arial&quot;, &quot;Helvetica&quot;, sans-serif;
 border:none;
 font-weight:600;
 font-size:12pt

@@ -78,7 +78,8 @@ class Ui_playScene(object):
 "  font-weight: 800;       \n"
 "border:none;\n"
 "background:transparent;\n"
-"padding-left:8px;")
+"margin-left:8px;\n"
+"")
         self.label_timer.setObjectName("label_timer")
         self.horizontalLayout_7.addWidget(self.label_timer, 0, QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.verticalLayout_5.addWidget(self.widget_7)
@@ -129,7 +130,8 @@ class Ui_playScene(object):
         self.widget.setObjectName("widget")
         self.label_category = QtWidgets.QLabel(parent=self.widget)
         self.label_category.setGeometry(QtCore.QRect(30, 20, 111, 31))
-        self.label_category.setStyleSheet("color:#7da5e7; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+        self.label_category.setStyleSheet("color:#7da5e7; \n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "border:none;\n"
 "font-weight:600;\n"
 "font-size:12pt\n"

@@ -460,5 +460,5 @@ class Ui_mainMenu(object):
         self.label_6.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:25pt; font-weight:800; color:#ffffff;\">5s | 90%</span></p></body></html>"))
         self.label_4.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Average Score</span></p></body></html>"))
         self.label_7.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:25pt; font-weight:800; color:#ffffff;\">20s | 75%</span></p></body></html>"))
-        self.label_5.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Best Win Streak</span></p></body></html>"))
+        self.label_5.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-size:12pt; font-weight:600;\">Best Perfect Streak</span></p></body></html>"))
         self.label_8.setText(_translate("mainMenu", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:25pt; font-weight:800; color:#ffffff;\">12</span></p></body></html>"))

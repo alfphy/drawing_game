@@ -56,7 +56,6 @@ class Ui_ContainerForm(object):
         self.verticalLayout.addWidget(self.tab_bar)
         self.stack_pages = QtWidgets.QStackedWidget(parent=ContainerForm)
         self.stack_pages.setObjectName("stack_pages")
-
         self.verticalLayout.addWidget(self.stack_pages)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 

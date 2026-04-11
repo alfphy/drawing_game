@@ -11,131 +11,239 @@ import resources_rc.background_rc
 import resources_rc.icons_rc
 
 
-class Ui_resultPage(object):
-    def setupUi(self, resultPage):
-        resultPage.setObjectName("resultPage")
-        resultPage.resize(485, 900)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
+class Ui_Dialog(object):
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(400, 389)
+        Dialog.setStyleSheet("background-color:transparent;")
+        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame_3 = QtWidgets.QFrame(parent=Dialog)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Expanding, QtWidgets.QSizePolicy.Policy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(resultPage.sizePolicy().hasHeightForWidth())
-        resultPage.setSizePolicy(sizePolicy)
-        resultPage.setStyleSheet("background-color: rgb(107, 122, 245);")
-        self.verticalLayout_8 = QtWidgets.QVBoxLayout(resultPage)
-        self.verticalLayout_8.setObjectName("verticalLayout_8")
-        self.label_winOrLose = QtWidgets.QLabel(parent=resultPage)
-        self.label_winOrLose.setMinimumSize(QtCore.QSize(0, 0))
-        self.label_winOrLose.setMaximumSize(QtCore.QSize(16777215, 50))
-        font = QtGui.QFont()
-        font.setPointSize(50)
-        self.label_winOrLose.setFont(font)
-        self.label_winOrLose.setStyleSheet("color: rgb(0, 255, 0);\n"
-"")
-        self.label_winOrLose.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_winOrLose.setObjectName("label_winOrLose")
-        self.verticalLayout_8.addWidget(self.label_winOrLose)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SizeConstraint.SetNoConstraint)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.frame_2 = QtWidgets.QFrame(parent=resultPage)
+        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setMinimumSize(QtCore.QSize(390, 390))
+        self.frame_3.setMaximumSize(QtCore.QSize(180, 800))
+        self.frame_3.setStyleSheet("background-color:#191A1E;\n"
+"border-radius:15;\n"
+"border:1px solid #262627;")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.verticalLayout_6 = QtWidgets.QVBoxLayout(self.frame_3)
+        self.verticalLayout_6.setObjectName("verticalLayout_6")
+        self.frame_2 = QtWidgets.QFrame(parent=self.frame_3)
+        self.frame_2.setMinimumSize(QtCore.QSize(200, 40))
+        self.frame_2.setMaximumSize(QtCore.QSize(200, 40))
+        self.frame_2.setStyleSheet("background:transparent; \n"
+"border:none;")
         self.frame_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.frame_2)
-        self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.label_3 = QtWidgets.QLabel(parent=self.frame_2)
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(20)
-        font.setBold(True)
-        self.label_3.setFont(font)
-        self.label_3.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_3.setObjectName("label_3")
-        self.verticalLayout_7.addWidget(self.label_3)
-        self.label_word = QtWidgets.QLabel(parent=self.frame_2)
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(14)
-        font.setBold(True)
-        self.label_word.setFont(font)
-        self.label_word.setStyleSheet("color: rgb(255, 197, 66);")
-        self.label_word.setObjectName("label_word")
-        self.verticalLayout_7.addWidget(self.label_word)
-        self.label_phrase = QtWidgets.QLabel(parent=self.frame_2)
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(14)
-        font.setBold(True)
-        self.label_phrase.setFont(font)
-        self.label_phrase.setStyleSheet("color: rgb(255, 197, 66);")
-        self.label_phrase.setObjectName("label_phrase")
-        self.verticalLayout_7.addWidget(self.label_phrase)
-        self.label_AiTopGuess = QtWidgets.QLabel(parent=self.frame_2)
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(14)
-        font.setBold(True)
-        self.label_AiTopGuess.setFont(font)
-        self.label_AiTopGuess.setStyleSheet("color: rgb(255, 197, 66);")
-        self.label_AiTopGuess.setObjectName("label_AiTopGuess")
-        self.verticalLayout_7.addWidget(self.label_AiTopGuess)
-        self.verticalLayout_2.addWidget(self.frame_2)
-        self.frame = QtWidgets.QFrame(parent=resultPage)
-        self.frame.setMinimumSize(QtCore.QSize(0, 0))
-        self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame.setObjectName("frame")
-        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.frame)
-        self.verticalLayout_5.setObjectName("verticalLayout_5")
-        self.label_AIGuessesTitle = QtWidgets.QLabel(parent=self.frame)
-        self.label_AIGuessesTitle.setMaximumSize(QtCore.QSize(16777215, 20))
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(20)
-        font.setBold(True)
-        self.label_AIGuessesTitle.setFont(font)
-        self.label_AIGuessesTitle.setStyleSheet("color: rgb(255, 255, 255);")
-        self.label_AIGuessesTitle.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
-        self.label_AIGuessesTitle.setObjectName("label_AIGuessesTitle")
-        self.verticalLayout_5.addWidget(self.label_AIGuessesTitle)
-        self.label_aiGuesses = QtWidgets.QLabel(parent=self.frame)
-        font = QtGui.QFont()
-        font.setFamily("SansSerif")
-        font.setPointSize(14)
-        font.setBold(True)
-        self.label_aiGuesses.setFont(font)
-        self.label_aiGuesses.setAcceptDrops(False)
-        self.label_aiGuesses.setStyleSheet("color: rgb(255, 197, 66);")
-        self.label_aiGuesses.setObjectName("label_aiGuesses")
-        self.verticalLayout_5.addWidget(self.label_aiGuesses)
-        self.verticalLayout_2.addWidget(self.frame)
-        self.verticalLayout_8.addLayout(self.verticalLayout_2)
-        self.button_NextRound = QtWidgets.QPushButton(parent=resultPage)
-        font = QtGui.QFont()
-        font.setFamily("MS Sans Serif")
-        font.setPointSize(30)
-        font.setBold(True)
-        self.button_NextRound.setFont(font)
-        self.button_NextRound.setStyleSheet("background-color: rgb(255, 197, 66);\n"
-"color: rgb(255, 255, 255);\n"
-"padding: 12%;\n"
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.label_6 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_6.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_6.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_6.setStyleSheet("background:transparent; \n"
+"border:none;")
+        self.label_6.setText("")
+        self.label_6.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_6.setScaledContents(True)
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout_2.addWidget(self.label_6)
+        self.label_7 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_7.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_7.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_7.setStyleSheet("background:transparent; \n"
+"border:none;")
+        self.label_7.setText("")
+        self.label_7.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_7.setScaledContents(True)
+        self.label_7.setObjectName("label_7")
+        self.horizontalLayout_2.addWidget(self.label_7)
+        self.label_9 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_9.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_9.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_9.setStyleSheet("background:transparent; \n"
+"border:none;")
+        self.label_9.setText("")
+        self.label_9.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_9.setScaledContents(True)
+        self.label_9.setObjectName("label_9")
+        self.horizontalLayout_2.addWidget(self.label_9)
+        self.label_8 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_8.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_8.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_8.setStyleSheet("background:transparent; \n"
+"border:none;")
+        self.label_8.setText("")
+        self.label_8.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_8.setScaledContents(True)
+        self.label_8.setObjectName("label_8")
+        self.horizontalLayout_2.addWidget(self.label_8)
+        self.label_10 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_10.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_10.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_10.setStyleSheet("background:transparent; \n"
+"border:none;")
+        self.label_10.setText("")
+        self.label_10.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_10.setScaledContents(True)
+        self.label_10.setObjectName("label_10")
+        self.horizontalLayout_2.addWidget(self.label_10)
+        self.verticalLayout_6.addWidget(self.frame_2, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label = QtWidgets.QLabel(parent=self.frame_3)
+        self.label.setMinimumSize(QtCore.QSize(0, 50))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.label.setStyleSheet("color:white; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:800;\n"
+"font-size:31pt;\n"
+"background:transparent; \n"
+"border:none;")
+        self.label.setObjectName("label")
+        self.verticalLayout_6.addWidget(self.label, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.widget_3 = QtWidgets.QWidget(parent=self.frame_3)
+        self.widget_3.setMinimumSize(QtCore.QSize(0, 100))
+        self.widget_3.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget_3.setStyleSheet("background-color:#1C1B1B;\n"
+"border-radius:10px;\n"
+"border:1px solid #262627;")
+        self.widget_3.setObjectName("widget_3")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_3)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem)
+        self.label_2 = QtWidgets.QLabel(parent=self.widget_3)
+        self.label_2.setStyleSheet("color:#C9BFC0;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:8pt;\n"
 "")
-        self.button_NextRound.setObjectName("button_NextRound")
-        self.verticalLayout_8.addWidget(self.button_NextRound)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout_3.addWidget(self.label_2, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignBottom)
+        self.label_3 = QtWidgets.QLabel(parent=self.widget_3)
+        self.label_3.setStyleSheet("color:white;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:18pt")
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout_3.addWidget(self.label_3, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_3.addItem(spacerItem1)
+        self.horizontalLayout_3.addWidget(self.widget_3)
+        self.widget_2 = QtWidgets.QWidget(parent=self.frame_3)
+        self.widget_2.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget_2.setStyleSheet("background-color:#1C1B1B;\n"
+"border-radius:10px;\n"
+"border:1px solid #262627;")
+        self.widget_2.setObjectName("widget_2")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget_2)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
+        spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem2)
+        self.label_4 = QtWidgets.QLabel(parent=self.widget_2)
+        self.label_4.setStyleSheet("color:#C9BFC0;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:8pt;\n"
+"")
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label_5 = QtWidgets.QLabel(parent=self.widget_2)
+        self.label_5.setStyleSheet("color:white;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:18pt")
+        self.label_5.setObjectName("label_5")
+        self.verticalLayout_4.addWidget(self.label_5, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem3)
+        self.horizontalLayout_3.addWidget(self.widget_2)
+        self.widget = QtWidgets.QWidget(parent=self.frame_3)
+        self.widget.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.widget.setStyleSheet("background-color:#1C1B1B;\n"
+"border-radius:10px;\n"
+"border:0.5px solid #454955;")
+        self.widget.setObjectName("widget")
+        self.verticalLayout_5 = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout_5.setObjectName("verticalLayout_5")
+        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem4)
+        self.label_11 = QtWidgets.QLabel(parent=self.widget)
+        self.label_11.setStyleSheet("color:#C9BFC0;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:8pt;\n"
+"")
+        self.label_11.setObjectName("label_11")
+        self.verticalLayout_5.addWidget(self.label_11, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label_12 = QtWidgets.QLabel(parent=self.widget)
+        self.label_12.setStyleSheet("color:white;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:18pt")
+        self.label_12.setObjectName("label_12")
+        self.verticalLayout_5.addWidget(self.label_12, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_5.addItem(spacerItem5)
+        self.horizontalLayout_3.addWidget(self.widget)
+        self.verticalLayout_6.addLayout(self.horizontalLayout_3)
+        self.button_next = QtWidgets.QPushButton(parent=self.frame_3)
+        self.button_next.setMinimumSize(QtCore.QSize(0, 70))
+        self.button_next.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.button_next.setStyleSheet("QPushButton{background-color:#E9C400;\n"
+" font-weight: bold;\n"
+"   border-top-left-radius: 15px;\n"
+"    border-top-right-radius: 8px;\n"
+"    border-bottom-left-radius: 8px;\n"
+"    border-bottom-right-radius: 15px;\n"
+"    color: black;\n"
+"    font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"\n"
+"    font-weight: bold;\n"
+"    font-style: italic;\n"
+"    letter-spacing: -0.025em;\n"
+"font-size:16px\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+"{\n"
+"background-color:#FFD901;\n"
+"}\n"
+"")
+        self.button_next.setObjectName("button_next")
+        self.verticalLayout_6.addWidget(self.button_next)
+        self.verticalLayout_6.setStretch(0, 1)
+        self.verticalLayout_6.setStretch(1, 1)
+        self.verticalLayout_6.setStretch(2, 1)
+        self.verticalLayout_6.setStretch(3, 1)
+        self.verticalLayout.addWidget(self.frame_3, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
 
-        self.retranslateUi(resultPage)
-        QtCore.QMetaObject.connectSlotsByName(resultPage)
+        self.retranslateUi(Dialog)
+        QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, resultPage):
+    def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        resultPage.setWindowTitle(_translate("resultPage", "Form"))
-        self.label_winOrLose.setText(_translate("resultPage", "WIN"))
-        self.label_3.setText(_translate("resultPage", "RESULT"))
-        self.label_word.setText(_translate("resultPage", "Word:"))
-        self.label_phrase.setText(_translate("resultPage", "Phrase:"))
-        self.label_AiTopGuess.setText(_translate("resultPage", "AI\'s Top guess:"))
-        self.label_AIGuessesTitle.setText(_translate("resultPage", "AI\'s Guesses"))
-        self.label_aiGuesses.setText(_translate("resultPage", "<html><head/><body><p><span style=\" color:#00aa00;\">DOG: 89.56%</span></p><p><span style=\" color:#ffffff;\">CAT: 6.56%</span></p><p><span style=\" color:#ffffff;\">RAT: 5.56%</span></p></body></html>"))
-        self.button_NextRound.setText(_translate("resultPage", "NEXT ROUND"))
+        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.label.setText(_translate("Dialog", "PERFECT!"))
+        self.label_2.setText(_translate("Dialog", "TIME SPENT"))
+        self.label_3.setText(_translate("Dialog", "30s"))
+        self.label_4.setText(_translate("Dialog", "ACCURACY"))
+        self.label_5.setText(_translate("Dialog", "96%"))
+        self.label_11.setText(_translate("Dialog", "PERFECT STREAK"))
+        self.label_12.setText(_translate("Dialog", "4"))
+        self.button_next.setText(_translate("Dialog", "Next"))
