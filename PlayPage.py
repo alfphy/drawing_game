@@ -21,7 +21,14 @@ class DrawingCanvas(qtw.QWidget):
         self.last_point = None
         self.brush_size = 3
         self.brush_color = QtCore.Qt.GlobalColor.black
+        self.is_eraser = False
 
+    def set_eraser_mode(self, enabled: bool):
+        self.is_eraser = enabled
+
+    def toggle_eraser(self):
+        self.is_eraser = not self.is_eraser
+        return self.is_eraser
 
     def clear(self):
         self.image.fill(QtCore.Qt.GlobalColor.white)
@@ -41,7 +48,8 @@ class DrawingCanvas(qtw.QWidget):
             if event.buttons() & QtCore.Qt.MouseButton.LeftButton and self.last_point:
                 current_point = event.position().toPoint()
                 painter = QtGui.QPainter(self.image)
-                painter.setPen(QtGui.QPen(self.brush_color, self.brush_size, QtCore.Qt.PenStyle.SolidLine, QtCore.Qt.PenCapStyle.RoundCap, QtCore.Qt.PenJoinStyle.RoundJoin))
+                draw_color = QtCore.Qt.GlobalColor.white if self.is_eraser else self.brush_color
+                painter.setPen(QtGui.QPen(draw_color, self.brush_size, QtCore.Qt.PenStyle.SolidLine, QtCore.Qt.PenCapStyle.RoundCap, QtCore.Qt.PenJoinStyle.RoundJoin))
                 painter.drawLine(self.last_point, current_point)
                 self.last_point = current_point
                 self.update()
@@ -130,6 +138,25 @@ font-size:12pt
 
         self.update_timer_display()
 
+        self.ui.verticalSlider.setRange(1, 20)  # Set appropriate range
+        self.ui.verticalSlider.valueChanged.connect(self.adjust_brush_size)
+        self.ui.button_erase.clicked.connect(self.toggle_eraser_mode)
+        self.ui.button_pen.clicked.connect(self.toggle_pen_mode)
+
+    def toggle_pen_mode(self):
+        if self.canvas.is_eraser:
+            self.canvas.set_eraser_mode(False)
+        self.ui.button_pen.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
+        self.ui.button_erase.setStyleSheet("background:transparent; border:none;")
+
+    def toggle_eraser_mode(self):
+        is_eraser = self.canvas.toggle_eraser()
+        if is_eraser:
+            self.ui.button_erase.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
+            self.ui.button_pen.setStyleSheet("background:transparent; border:none;")
+        else:
+            self.ui.button_erase.setStyleSheet("background:transparent; border:none;")
+
     def choose_color(self):
         color = QColorDialog.getColor()
 
@@ -204,7 +231,7 @@ margin:0px; """)
 
 
     def get_remaining_time(self):
-        """Return time left in seconds"""
         return self.time_left
 
-
+    def adjust_brush_size(self, size):
+        self.canvas.brush_size = size
