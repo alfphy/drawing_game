@@ -152,8 +152,11 @@ def score_drawing(image, challenge_phrase, category=None):
         "random scribbles",
     ]
 
+    # Get category prompts for top guess
+    category_prompts = get_category_prompts(category) if category else ["a drawing"]
+    
     # Combine all prompts
-    all_prompts = [positive] + negatives
+    all_prompts = [positive] + negatives + category_prompts
     start_time = time.time()
     # Process image and text
     inputs = processor(text=all_prompts, images=image, return_tensors="pt", padding=True)
@@ -171,7 +174,13 @@ def score_drawing(image, challenge_phrase, category=None):
     similarities = (image_features @ text_features.T)[0]
 
     pos_sim = similarities[0].item()
-    neg_sim = similarities[1:].mean().item()
+    neg_sim = similarities[1:4].mean().item()
+    
+    # Get top guess from category prompts (indices 4 onwards)
+    category_sims = similarities[4:].cpu().detach().numpy()
+    top_idx = category_sims.argmax()
+    top_guess = category_prompts[top_idx]
+    top_guess_score = category_sims[top_idx]
 
     # Calibrated score
     calibrated = pos_sim - neg_sim
@@ -187,8 +196,9 @@ def score_drawing(image, challenge_phrase, category=None):
     print(f"Negative avg: {neg_sim:.4f}")
     print(f"Calibrated: {calibrated:.4f}")
     print(f"Score: {score:.2f}%")
+    print(f"Top guess: {top_guess} ({top_guess_score:.4f})")
 
-    return score
+    return score, top_guess
 
 # def score_drawing(image,challenge_phrase):
 #

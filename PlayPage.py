@@ -326,21 +326,12 @@ margin:0px; """)
         self.canvas.save_image()
 
         print("Generating result")
-        score = analyzer.clip_process.score_drawing('draw.png',str(self.ui.label_phrase.text()))
-        """
-        print("New phrase coming...")
-        self.canvas.clear()
-        phrase_index = random.randint(0, 19)
-        category_index = random.randint(0, 3)
+        score, top_guess = analyzer.clip_process.score_drawing('draw.png', str(self.ui.label_phrase.text()), self.category_name)
+        
+        time_spent = 60 - self.time_left
+        target_phrase = str(self.ui.label_phrase.text())
 
-        category_name, phrase = analyzer.phrases.get_phrase(category_index, phrase_index)
-
-        self.ui.label_phrase.setText(phrase)
-        self.ui.label_category.setText(str(category_name))
-        self.start_timer(30)
-        """
-
-        dialog_result = ResultPage.ResultPage(self)
+        dialog_result = ResultPage.ResultPage(self, score=score, top_guess=top_guess, time_spent=time_spent, target_phrase=target_phrase)
 
         dialog_result.exec()
         dialog_result.move(

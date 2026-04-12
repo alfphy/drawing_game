@@ -202,6 +202,34 @@ class Ui_Dialog(object):
         self.verticalLayout_5.addItem(spacerItem5)
         self.horizontalLayout_3.addWidget(self.widget)
         self.verticalLayout_6.addLayout(self.horizontalLayout_3)
+        self.widget_result = QtWidgets.QWidget(parent=self.frame_3)
+        self.widget_result.setMinimumSize(QtCore.QSize(0, 80))
+        self.widget_result.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.widget_result.setStyleSheet("background-color:#1C1B1B;\n"
+"border-radius:10px;\n"
+"border:1px solid #262627;")
+        self.widget_result.setObjectName("widget_result")
+        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.widget_result)
+        self.verticalLayout_7.setObjectName("verticalLayout_7")
+        self.label_ai_thinks = QtWidgets.QLabel(parent=self.widget_result)
+        self.label_ai_thinks.setStyleSheet("color:#a0a0a0;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:500;\n"
+"font-size:9pt;\n"
+"")
+        self.label_ai_thinks.setObjectName("label_ai_thinks")
+        self.verticalLayout_7.addWidget(self.label_ai_thinks, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_target = QtWidgets.QLabel(parent=self.widget_result)
+        self.label_target.setStyleSheet("color:#E9C400;\n"
+"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+"border:none;\n"
+"font-weight:600;\n"
+"font-size:12pt;\n"
+"")
+        self.label_target.setObjectName("label_target")
+        self.verticalLayout_7.addWidget(self.label_target, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignBottom)
+        self.verticalLayout_6.addWidget(self.widget_result)
         self.button_next = QtWidgets.QPushButton(parent=self.frame_3)
         self.button_next.setMinimumSize(QtCore.QSize(0, 70))
         self.button_next.setMaximumSize(QtCore.QSize(16777215, 70))
@@ -246,4 +274,6 @@ class Ui_Dialog(object):
         self.label_5.setText(_translate("Dialog", "96%"))
         self.label_11.setText(_translate("Dialog", "PERFECT STREAK"))
         self.label_12.setText(_translate("Dialog", "4"))
+        self.label_ai_thinks.setText(_translate("Dialog", "AI thinks: a cat"))
+        self.label_target.setText(_translate("Dialog", "Target: a dog sitting"))
         self.button_next.setText(_translate("Dialog", "Next"))
