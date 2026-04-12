@@ -94,10 +94,6 @@ class PlayPage(qtw.QWidget):
 
         dialog_result = ResultPage.ResultPage(self, score=score, time_spent=time_spent, target_phrase=target_phrase)
 
-        dialog_result.move(
-            self.x() + (self.width() - dialog_result.width()) // 2,
-            self.y() + (self.height() - dialog_result.height()) // 2
-        )
 
         dialog_result.exec()
         self.canvas.clear()

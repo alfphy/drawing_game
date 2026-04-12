@@ -120,7 +120,6 @@ class Ui_mainMenu(object):
         self.label_11 = QtWidgets.QLabel(parent=self.easy_card_2)
         font = QtGui.QFont()
         font.setBold(True)
-        font.setWeight(75)
         self.label_11.setFont(font)
         self.label_11.setStyleSheet("")
         self.label_11.setObjectName("label_11")
@@ -138,7 +137,7 @@ class Ui_mainMenu(object):
         self.button_easy = QtWidgets.QPushButton(parent=self.easy_card_2)
         self.button_easy.setMinimumSize(QtCore.QSize(0, 60))
         self.button_easy.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.button_easy.setMouseTracking(False)
+        self.button_easy.setMouseTracking(True)
         self.button_easy.setStyleSheet("QPushButton{background-color:#0069EC;\n"
 " font-weight: bold;\n"
 " border-radius:20px;\n"
@@ -217,7 +216,6 @@ class Ui_mainMenu(object):
         self.label_16 = QtWidgets.QLabel(parent=self.easy_card_3)
         font = QtGui.QFont()
         font.setBold(True)
-        font.setWeight(75)
         self.label_16.setFont(font)
         self.label_16.setStyleSheet("")
         self.label_16.setObjectName("label_16")
@@ -313,7 +311,6 @@ class Ui_mainMenu(object):
         self.label_19 = QtWidgets.QLabel(parent=self.easy_card_4)
         font = QtGui.QFont()
         font.setBold(True)
-        font.setWeight(75)
         self.label_19.setFont(font)
         self.label_19.setStyleSheet("")
         self.label_19.setObjectName("label_19")
@@ -331,7 +328,7 @@ class Ui_mainMenu(object):
         self.button_hard = QtWidgets.QPushButton(parent=self.easy_card_4)
         self.button_hard.setMinimumSize(QtCore.QSize(0, 60))
         self.button_hard.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.button_hard.setMouseTracking(False)
+        self.button_hard.setMouseTracking(True)
         self.button_hard.setStyleSheet("QPushButton{background-color:#0069EC;\n"
 " font-weight: bold;\n"
 " border-radius:20px;\n"
@@ -430,7 +427,6 @@ class Ui_mainMenu(object):
         self.verticalLayout_5.setStretch(1, 2)
         self.verticalLayout_4.addWidget(self.frame, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout.addLayout(self.verticalLayout_4)
-        self.verticalLayout.setStretch(0, 6)
 
         self.retranslateUi(mainMenu)
         QtCore.QMetaObject.connectSlotsByName(mainMenu)

@@ -62,7 +62,7 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,6,0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,6,1">
       <property name="spacing">
        <number>50</number>
       </property>
@@ -274,7 +274,7 @@ background:transparent;</string>
        </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5,1">
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,5">
         <property name="leftMargin">
          <number>0</number>
         </property>
@@ -384,11 +384,17 @@ background:transparent;
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="drawing_space"/>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item alignment="Qt::AlignHCenter">
+         <layout class="QVBoxLayout" name="vlayout">
+          <item>
+           <widget class="QWidget" name="widget_11" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <layout class="QVBoxLayout" name="drawing_space"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
            <widget class="QPushButton" name="button_done">
             <property name="minimumSize">
              <size>
@@ -425,19 +431,6 @@ background-color:#FFD901;
              <string>DONE</string>
             </property>
            </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>

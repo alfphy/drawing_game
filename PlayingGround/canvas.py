@@ -6,7 +6,7 @@ class DrawingCanvas(qtw.QWidget):
     def __init__(self, parent=None):
         super().__init__()
         self.parent = parent
-        self.setMinimumSize(640, 640)
+        self.setMinimumSize(780, 780)
 
         self.image = QtGui.QImage(self.size(), QtGui.QImage.Format.Format_ARGB32)
         self.image.fill(QtCore.Qt.GlobalColor.white)
@@ -120,6 +120,7 @@ class DrawingCanvas(qtw.QWidget):
     def save_image(self):
         # Save
         cropped = self.get_image()
+        cropped = cropped[:, :, ::-1] #swapp ang channel para mo rgb
         pil_image = Image.fromarray(cropped.astype(np.uint8))
         pil_image.save('draw.png')
         print(f"Image cropped and saved! ")

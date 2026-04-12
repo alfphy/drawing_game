@@ -4,7 +4,7 @@ import PyQt6.QtCore as qtc
 import PyQt6.QtGui as qtg
 from PyQt6.QtGui import QPalette , QColor
 import ui.containerForm
-
+import os
 from MainPage import MainPage
 from PlayPage import PlayPage
 from ResultPage import ResultPage
@@ -18,7 +18,6 @@ class ContainerPage(qtw.QWidget):
         self.ui.setupUi(self)
         for i in range(self.ui.stack_pages.count()):
             self.ui.stack_pages.removeWidget(self.ui.stack_pages.widget(0))
-        self.showMaximized()
 
         self.mainPage = MainPage(self)
         self.startingPage = StartingPage(self)
@@ -32,6 +31,8 @@ class ContainerPage(qtw.QWidget):
         self.ui.stack_pages.currentChanged.connect(self.pages_changed)
 
         self.ui.stack_pages.setCurrentIndex(0)
+        self.showMaximized()
+
 
     def pages_changed(self):
         if self.ui.stack_pages.currentIndex() == 0:

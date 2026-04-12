@@ -20,7 +20,7 @@
   <property name="styleSheet">
    <string notr="true">background-color:#161616; color:white;</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="6">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0">
      <property name="spacing">
@@ -295,7 +295,6 @@ QFrame:hover {
                    <widget class="QLabel" name="label_11">
                     <property name="font">
                      <font>
-                      <weight>75</weight>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -348,7 +347,7 @@ QFrame:hover {
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="mouseTracking">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton{background-color:#0069EC;
@@ -525,7 +524,6 @@ QFrame:hover {
                    <widget class="QLabel" name="label_16">
                     <property name="font">
                      <font>
-                      <weight>75</weight>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -747,7 +745,6 @@ QFrame:hover {
                    <widget class="QLabel" name="label_19">
                     <property name="font">
                      <font>
-                      <weight>75</weight>
                       <bold>true</bold>
                      </font>
                     </property>
@@ -801,7 +798,7 @@ QFrame:hover {
                      <cursorShape>PointingHandCursor</cursorShape>
                     </property>
                     <property name="mouseTracking">
-                     <bool>false</bool>
+                     <bool>true</bool>
                     </property>
                     <property name="styleSheet">
                      <string notr="true">QPushButton{background-color:#0069EC;
