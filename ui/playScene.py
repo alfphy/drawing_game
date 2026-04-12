@@ -109,6 +109,31 @@ class Ui_playScene(object):
         self.label_difficulty.setObjectName("label_difficulty")
         self.horizontalLayout_8.addWidget(self.label_difficulty)
         self.verticalLayout_5.addWidget(self.widget_8)
+        self.widget_9 = QtWidgets.QWidget(parent=self.verticalFrame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.widget_9.sizePolicy().hasHeightForWidth())
+        self.widget_9.setSizePolicy(sizePolicy)
+        self.widget_9.setMinimumSize(QtCore.QSize(120, 80))
+        self.widget_9.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.widget_9.setStyleSheet("    background-color: #1c1b1b;\n"
+"    border-radius: 15px;\n"
+"border:1px solid #262627;")
+        self.widget_9.setObjectName("widget_9")
+        self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.widget_9)
+        self.verticalLayout_8.setProperty("contentsMargins", 10)
+        self.verticalLayout_8.setObjectName("verticalLayout_8")
+        self.label_ai_feedback = QtWidgets.QLabel(parent=self.widget_9)
+        self.label_ai_feedback.setStyleSheet("color:#a0a0a0; font-family: \"Segoe UI\";\n"
+"border:none;\n"
+"font-weight:500;\n"
+"font-size:10pt;\n"
+"background:transparent;")
+        self.label_ai_feedback.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_ai_feedback.setObjectName("label_ai_feedback")
+        self.verticalLayout_8.addWidget(self.label_ai_feedback, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_5.addWidget(self.widget_9)
         self.horizontalLayout_4.addWidget(self.verticalFrame_2, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout = QtWidgets.QVBoxLayout()
         self.verticalLayout.setContentsMargins(0, -1, 0, -1)
@@ -409,6 +434,7 @@ class Ui_playScene(object):
         playScene.setWindowTitle(_translate("playScene", "Speed Sketch"))
         self.label_timer.setText(_translate("playScene", "00:00"))
         self.label_difficulty.setText(_translate("playScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; color:#a0a0a0;\">Easy</span></p>"))
+        self.label_ai_feedback.setText(_translate("playScene", "AI thinks..."))
         self.label_category.setText(_translate("playScene", "ANIMALS"))
         self.label_phrase.setText(_translate("playScene", "a Dog sitting."))
         self.button_done.setText(_translate("playScene", "DONE"))
