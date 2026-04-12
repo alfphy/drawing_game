@@ -15,7 +15,8 @@ class ContainerPage(qtw.QWidget):
         self.ui = ui.containerForm.Ui_ContainerForm()
         self.ui.setupUi(self)
         self.showMaximized()
-
+        for i in range(self.ui.stack_pages.count()):
+            self.ui.stack_pages.removeWidget(self.ui.stack_pages.widget(0))
         self.mainPage = MainPage(self)
         self.startingPage = StartingPage(self)
         self.playPage = PlayPage(self)

@@ -131,6 +131,7 @@ def generate_commentary(top_prompts, top_scores):
         return "waiting for you to draw..."
 
 
+
 def score_drawing(image, challenge_phrase, category=None):
     # Build positive prompt
     if category == "Emoji":
@@ -152,11 +153,8 @@ def score_drawing(image, challenge_phrase, category=None):
         "random scribbles",
     ]
 
-    # Get category prompts for top guess
-    category_prompts = get_category_prompts(category) if category else ["a drawing"]
-    
     # Combine all prompts
-    all_prompts = [positive] + negatives + category_prompts
+    all_prompts = [positive] + negatives
     start_time = time.time()
     # Process image and text
     inputs = processor(text=all_prompts, images=image, return_tensors="pt", padding=True)
@@ -174,18 +172,13 @@ def score_drawing(image, challenge_phrase, category=None):
     similarities = (image_features @ text_features.T)[0]
 
     pos_sim = similarities[0].item()
-    neg_sim = similarities[1:4].mean().item()
-    
-    # Get top guess from category prompts (indices 4 onwards)
-    category_sims = similarities[4:].cpu().detach().numpy()
-    top_idx = category_sims.argmax()
-    top_guess = category_prompts[top_idx]
-    top_guess_score = category_sims[top_idx]
+    neg_sim = similarities[1:].mean().item()
 
-    # Calibrated score - direct similarity mapping
-    # CLIP typically outputs 0.15-0.35 for drawings
-    # Map: 0.15 → 0%, 0.40 → 100%
-    score = max(0, min(100, (pos_sim - 0.15) * 400))
+    # Calibrated score
+    calibrated = pos_sim - neg_sim
+
+    # Map to 0-100 (calibrated range ~ -0.05 to 0.20)
+    score = max(0, min(100, calibrated * 500))
 
     end_time = time.time()
     inference_time =( end_time - start_time ) * 1000
@@ -193,10 +186,11 @@ def score_drawing(image, challenge_phrase, category=None):
     print(f"Target: {positive}")
     print(f"Positive similarity: {pos_sim:.4f}")
     print(f"Negative avg: {neg_sim:.4f}")
+    print(f"Calibrated: {calibrated:.4f}")
     print(f"Score: {score:.2f}%")
-    print(f"Top guess: {top_guess} ({top_guess_score:.4f})")
 
-    return score, top_guess
+    return score
+
 
 # def score_drawing(image,challenge_phrase):
 #

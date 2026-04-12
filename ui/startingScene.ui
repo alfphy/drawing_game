@@ -161,7 +161,7 @@
            <number>20</number>
           </property>
           <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="animals_card" native="true">
+           <widget class="QWidget" name="animals_bg_card" native="true">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -182,18 +182,18 @@
             </property>
             <property name="styleSheet">
              <string notr="true">QWidget{
-border-radius:10px;
 background-repeat: no-repeat;
  background-position: center;
-    border: 2px solid #0069EC;
+border-radius:10px;
+
 background-image:url(:/category/lion_sketch.jfif);
+border:2px solid 262627;
 
 }
 
 QWidget:hover {
     border: 2px solid #0069EC;
-}
-</string>
+}</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <property name="leftMargin">
@@ -209,13 +209,24 @@ QWidget:hover {
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="widget_6" native="true">
+              <widget class="QWidget" name="animals_card" native="true">
                <property name="styleSheet">
-                <string notr="true">background:none;
+                <string notr="true">
+QWidget
+{
+background:none;
+border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
 
-background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));
-
-</string>
+}
+QWidget[selected=&quot;true&quot;] {
+        border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
+    }
+    QWidget[selected=&quot;false&quot;] {
+        border:none;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.9));
+    }</string>
                </property>
                <widget class="QLabel" name="label_3">
                 <property name="geometry">
@@ -251,7 +262,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <bool>true</bool>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_4">
+               <widget class="QLabel" name="label_animals">
                 <property name="geometry">
                  <rect>
                   <x>30</x>
@@ -267,7 +278,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;Animals&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_checked">
+               <widget class="QLabel" name="label_checked_animals">
                 <property name="geometry">
                  <rect>
                   <x>260</x>
@@ -311,7 +322,7 @@ padding:5px;
            </widget>
           </item>
           <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="flowers_card" native="true">
+           <widget class="QWidget" name="flowers_bg_card" native="true">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -332,15 +343,14 @@ padding:5px;
 border-radius:10px;
 background-repeat: no-repeat;
  background-position: center;
-    border: 2px solid #0069EC;
 background-image:url(:/category/flowers_sketch.jfif);
+border:2px solid 262627;
 
 }
 
 QWidget:hover {
     border: 2px solid #0069EC;
-}
-</string>
+}</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <property name="leftMargin">
@@ -356,12 +366,27 @@ QWidget:hover {
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="widget_8" native="true">
+              <widget class="QWidget" name="flowers_card" native="true">
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
                <property name="styleSheet">
-                <string notr="true">background:none;
-background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));
+                <string notr="true">
+QWidget
+{
+background:none;
+border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
 
-</string>
+}
+QWidget[selected=&quot;true&quot;] {
+        border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
+    }
+    QWidget[selected=&quot;false&quot;] {
+        border:none;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.9));
+    }</string>
                </property>
                <widget class="QLabel" name="label_7">
                 <property name="geometry">
@@ -397,7 +422,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <bool>true</bool>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_8">
+               <widget class="QLabel" name="label_flowers">
                 <property name="geometry">
                  <rect>
                   <x>30</x>
@@ -413,7 +438,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;Flowers&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_checked_3">
+               <widget class="QLabel" name="label_checked_flowers">
                 <property name="geometry">
                  <rect>
                   <x>260</x>
@@ -457,7 +482,7 @@ padding:5px;
            </widget>
           </item>
           <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="vehicles_card" native="true">
+           <widget class="QWidget" name="vehicles_bg_card" native="true">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -478,15 +503,13 @@ padding:5px;
 border-radius:10px;
 background-repeat: no-repeat;
  background-position: center;
-    border: 2px solid #0069EC;
 background-image:url(:/category/vehicle_sketch.jfif);
-
+border:2px solid 262627;
 }
 
 QWidget:hover {
     border: 2px solid #0069EC;
-}
-</string>
+}</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <property name="spacing">
@@ -505,15 +528,27 @@ QWidget:hover {
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="widget_9" native="true">
+              <widget class="QWidget" name="vehicles_card" native="true">
                <property name="cursor">
-                <cursorShape>ArrowCursor</cursorShape>
+                <cursorShape>PointingHandCursor</cursorShape>
                </property>
                <property name="styleSheet">
-                <string notr="true">background:none;
-background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));
+                <string notr="true">
+QWidget
+{
+background:none;
+border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
 
-</string>
+}
+QWidget[selected=&quot;true&quot;] {
+        border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
+    }
+    QWidget[selected=&quot;false&quot;] {
+        border:none;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.9));
+    }</string>
                </property>
                <widget class="QLabel" name="label_9">
                 <property name="geometry">
@@ -549,7 +584,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <bool>true</bool>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_10">
+               <widget class="QLabel" name="label_vehicles">
                 <property name="geometry">
                  <rect>
                   <x>30</x>
@@ -565,7 +600,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;Vehicles&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_checked_4">
+               <widget class="QLabel" name="label_checked_vehicles">
                 <property name="geometry">
                  <rect>
                   <x>260</x>
@@ -609,7 +644,7 @@ padding:5px;
            </widget>
           </item>
           <item alignment="Qt::AlignTop">
-           <widget class="QWidget" name="emojis_card" native="true">
+           <widget class="QWidget" name="emojis_bg_card" native="true">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -630,15 +665,14 @@ padding:5px;
 border-radius:10px;
 background-repeat: no-repeat;
  background-position: center;
-    border: 2px solid #0069EC;
 background-image:url(:/category/emoji_sketch.jfif);
+border:2px solid 262627;
 
 }
 
 QWidget:hover {
     border: 2px solid #0069EC;
-}
-</string>
+}</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_8">
              <property name="leftMargin">
@@ -654,12 +688,24 @@ QWidget:hover {
               <number>0</number>
              </property>
              <item>
-              <widget class="QWidget" name="widget_10" native="true">
+              <widget class="QWidget" name="emojis_card" native="true">
                <property name="styleSheet">
-                <string notr="true">background:none;
-background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.6));
+                <string notr="true">
+QWidget
+{
+background:none;
+border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
 
-</string>
+}
+QWidget[selected=&quot;true&quot;] {
+        border: 2px solid #0069EC;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.5));
+    }
+    QWidget[selected=&quot;false&quot;] {
+        border:none;
+background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0.9));
+    }</string>
                </property>
                <widget class="QLabel" name="label_11">
                 <property name="geometry">
@@ -695,7 +741,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <bool>true</bool>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_12">
+               <widget class="QLabel" name="label_emojis">
                 <property name="geometry">
                  <rect>
                   <x>30</x>
@@ -711,7 +757,7 @@ background-color: qradialgradient(cx:0.5, cy:0.5, radius:0.8, fx:0.5, fy:0.5, st
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:16pt; font-weight:600; color:#ffffff;&quot;&gt;Emojis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-               <widget class="QLabel" name="label_checked_5">
+               <widget class="QLabel" name="label_checked_emojis">
                 <property name="geometry">
                  <rect>
                   <x>260</x>

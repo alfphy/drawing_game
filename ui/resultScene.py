@@ -14,8 +14,8 @@ import resources_rc.icons_rc
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(400, 389)
-        Dialog.setStyleSheet("background-color:transparent;")
+        Dialog.resize(400, 390)
+        Dialog.setStyleSheet("background-color:black;")
         self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
@@ -26,11 +26,24 @@ class Ui_Dialog(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
         self.frame_3.setSizePolicy(sizePolicy)
-        self.frame_3.setMinimumSize(QtCore.QSize(390, 390))
+        self.frame_3.setMinimumSize(QtCore.QSize(400, 390))
         self.frame_3.setMaximumSize(QtCore.QSize(180, 800))
-        self.frame_3.setStyleSheet("background-color:#191A1E;\n"
-"border-radius:15;\n"
-"border:1px solid #262627;")
+        self.frame_3.setStyleSheet("background: qlineargradient(\n"
+"    x1:0, y1:0, x2:1, y2:1,\n"
+"    /* Main Background - lighter */\n"
+"    stop:0 #1a1c23, \n"
+"    \n"
+"    /* Top Right Subtle Shadow Slope */\n"
+"    stop:0.15 #1a1c23, \n"
+"    stop:0.16 #14161c, \n"
+"    \n"
+"    /* Transition back to main background */\n"
+"    stop:0.84 #1a1c23, \n"
+"    \n"
+"    /* Bottom Right Light Geometric Slice */\n"
+"    stop:0.85 #2a2e38, \n"
+"    stop:1.0 #2a2e38\n"
+");")
         self.frame_3.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame_3.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame_3.setObjectName("frame_3")
@@ -46,69 +59,71 @@ class Ui_Dialog(object):
         self.frame_2.setObjectName("frame_2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_2)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.label_6 = QtWidgets.QLabel(parent=self.frame_2)
-        self.label_6.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_6.setMaximumSize(QtCore.QSize(30, 30))
-        self.label_6.setStyleSheet("background:transparent; \n"
+        self.label_star1 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_star1.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_star1.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_star1.setStyleSheet("background:transparent; \n"
 "border:none;")
-        self.label_6.setText("")
-        self.label_6.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
-        self.label_6.setScaledContents(True)
-        self.label_6.setObjectName("label_6")
-        self.horizontalLayout_2.addWidget(self.label_6)
-        self.label_7 = QtWidgets.QLabel(parent=self.frame_2)
-        self.label_7.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_7.setMaximumSize(QtCore.QSize(30, 30))
-        self.label_7.setStyleSheet("background:transparent; \n"
+        self.label_star1.setText("")
+        self.label_star1.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_star1.setScaledContents(True)
+        self.label_star1.setObjectName("label_star1")
+        self.horizontalLayout_2.addWidget(self.label_star1)
+        self.label_star2 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_star2.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_star2.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_star2.setStyleSheet("background:transparent; \n"
 "border:none;")
-        self.label_7.setText("")
-        self.label_7.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
-        self.label_7.setScaledContents(True)
-        self.label_7.setObjectName("label_7")
-        self.horizontalLayout_2.addWidget(self.label_7)
-        self.label_9 = QtWidgets.QLabel(parent=self.frame_2)
-        self.label_9.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_9.setMaximumSize(QtCore.QSize(30, 30))
-        self.label_9.setStyleSheet("background:transparent; \n"
+        self.label_star2.setText("")
+        self.label_star2.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_star2.setScaledContents(True)
+        self.label_star2.setObjectName("label_star2")
+        self.horizontalLayout_2.addWidget(self.label_star2)
+        self.label_star3 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_star3.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_star3.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_star3.setStyleSheet("background:transparent; \n"
 "border:none;")
-        self.label_9.setText("")
-        self.label_9.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
-        self.label_9.setScaledContents(True)
-        self.label_9.setObjectName("label_9")
-        self.horizontalLayout_2.addWidget(self.label_9)
-        self.label_8 = QtWidgets.QLabel(parent=self.frame_2)
-        self.label_8.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_8.setMaximumSize(QtCore.QSize(30, 30))
-        self.label_8.setStyleSheet("background:transparent; \n"
+        self.label_star3.setText("")
+        self.label_star3.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_star3.setScaledContents(True)
+        self.label_star3.setObjectName("label_star3")
+        self.horizontalLayout_2.addWidget(self.label_star3)
+        self.label_star4 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_star4.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_star4.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_star4.setStyleSheet("background:transparent; \n"
 "border:none;")
-        self.label_8.setText("")
-        self.label_8.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
-        self.label_8.setScaledContents(True)
-        self.label_8.setObjectName("label_8")
-        self.horizontalLayout_2.addWidget(self.label_8)
-        self.label_10 = QtWidgets.QLabel(parent=self.frame_2)
-        self.label_10.setMinimumSize(QtCore.QSize(30, 30))
-        self.label_10.setMaximumSize(QtCore.QSize(30, 30))
-        self.label_10.setStyleSheet("background:transparent; \n"
+        self.label_star4.setText("")
+        self.label_star4.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_star4.setScaledContents(True)
+        self.label_star4.setObjectName("label_star4")
+        self.horizontalLayout_2.addWidget(self.label_star4)
+        self.label_star5 = QtWidgets.QLabel(parent=self.frame_2)
+        self.label_star5.setMinimumSize(QtCore.QSize(30, 30))
+        self.label_star5.setMaximumSize(QtCore.QSize(30, 30))
+        self.label_star5.setStyleSheet("background:transparent; \n"
 "border:none;")
-        self.label_10.setText("")
-        self.label_10.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
-        self.label_10.setScaledContents(True)
-        self.label_10.setObjectName("label_10")
-        self.horizontalLayout_2.addWidget(self.label_10)
+        self.label_star5.setText("")
+        self.label_star5.setPixmap(QtGui.QPixmap(":/result/star_rate.svg"))
+        self.label_star5.setScaledContents(True)
+        self.label_star5.setObjectName("label_star5")
+        self.horizontalLayout_2.addWidget(self.label_star5)
         self.verticalLayout_6.addWidget(self.frame_2, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.label = QtWidgets.QLabel(parent=self.frame_3)
-        self.label.setMinimumSize(QtCore.QSize(0, 50))
-        self.label.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.label.setStyleSheet("color:white; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
+        self.label_rate = QtWidgets.QLabel(parent=self.frame_3)
+        self.label_rate.setMinimumSize(QtCore.QSize(0, 50))
+        self.label_rate.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.label_rate.setStyleSheet("color:white; font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "border:none;\n"
 "font-weight:800;\n"
 "font-size:31pt;\n"
 "background:transparent; \n"
 "border:none;")
-        self.label.setObjectName("label")
-        self.verticalLayout_6.addWidget(self.label, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label_rate.setObjectName("label_rate")
+        self.verticalLayout_6.addWidget(self.label_rate, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setContentsMargins(0, 0, -1, 0)
+        self.horizontalLayout_3.setSpacing(20)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.widget_3 = QtWidgets.QWidget(parent=self.frame_3)
         self.widget_3.setMinimumSize(QtCore.QSize(0, 100))
@@ -130,14 +145,14 @@ class Ui_Dialog(object):
 "")
         self.label_2.setObjectName("label_2")
         self.verticalLayout_3.addWidget(self.label_2, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignBottom)
-        self.label_3 = QtWidgets.QLabel(parent=self.widget_3)
-        self.label_3.setStyleSheet("color:white;\n"
+        self.label_timespent = QtWidgets.QLabel(parent=self.widget_3)
+        self.label_timespent.setStyleSheet("color:white;\n"
 "font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "border:none;\n"
 "font-weight:600;\n"
 "font-size:18pt")
-        self.label_3.setObjectName("label_3")
-        self.verticalLayout_3.addWidget(self.label_3, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
+        self.label_timespent.setObjectName("label_timespent")
+        self.verticalLayout_3.addWidget(self.label_timespent, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_3.addItem(spacerItem1)
         self.horizontalLayout_3.addWidget(self.widget_3)
@@ -160,14 +175,14 @@ class Ui_Dialog(object):
 "")
         self.label_4.setObjectName("label_4")
         self.verticalLayout_4.addWidget(self.label_4, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.label_5 = QtWidgets.QLabel(parent=self.widget_2)
-        self.label_5.setStyleSheet("color:white;\n"
+        self.label_accuracy = QtWidgets.QLabel(parent=self.widget_2)
+        self.label_accuracy.setStyleSheet("color:white;\n"
 "font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "border:none;\n"
 "font-weight:600;\n"
 "font-size:18pt")
-        self.label_5.setObjectName("label_5")
-        self.verticalLayout_4.addWidget(self.label_5, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label_accuracy.setObjectName("label_accuracy")
+        self.verticalLayout_4.addWidget(self.label_accuracy, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_4.addItem(spacerItem3)
         self.horizontalLayout_3.addWidget(self.widget_2)
@@ -190,49 +205,21 @@ class Ui_Dialog(object):
 "")
         self.label_11.setObjectName("label_11")
         self.verticalLayout_5.addWidget(self.label_11, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.label_12 = QtWidgets.QLabel(parent=self.widget)
-        self.label_12.setStyleSheet("color:white;\n"
+        self.label_perfectstreak = QtWidgets.QLabel(parent=self.widget)
+        self.label_perfectstreak.setStyleSheet("color:white;\n"
 "font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
 "border:none;\n"
 "font-weight:600;\n"
 "font-size:18pt")
-        self.label_12.setObjectName("label_12")
-        self.verticalLayout_5.addWidget(self.label_12, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.label_perfectstreak.setObjectName("label_perfectstreak")
+        self.verticalLayout_5.addWidget(self.label_perfectstreak, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
         self.verticalLayout_5.addItem(spacerItem5)
         self.horizontalLayout_3.addWidget(self.widget)
         self.verticalLayout_6.addLayout(self.horizontalLayout_3)
-        self.widget_result = QtWidgets.QWidget(parent=self.frame_3)
-        self.widget_result.setMinimumSize(QtCore.QSize(0, 80))
-        self.widget_result.setMaximumSize(QtCore.QSize(16777215, 80))
-        self.widget_result.setStyleSheet("background-color:#1C1B1B;\n"
-"border-radius:10px;\n"
-"border:1px solid #262627;")
-        self.widget_result.setObjectName("widget_result")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.widget_result)
-        self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.label_ai_thinks = QtWidgets.QLabel(parent=self.widget_result)
-        self.label_ai_thinks.setStyleSheet("color:#a0a0a0;\n"
-"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
-"border:none;\n"
-"font-weight:500;\n"
-"font-size:9pt;\n"
-"")
-        self.label_ai_thinks.setObjectName("label_ai_thinks")
-        self.verticalLayout_7.addWidget(self.label_ai_thinks, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignTop)
-        self.label_target = QtWidgets.QLabel(parent=self.widget_result)
-        self.label_target.setStyleSheet("color:#E9C400;\n"
-"font-family: \"Arial\", \"Helvetica\", sans-serif;\n"
-"border:none;\n"
-"font-weight:600;\n"
-"font-size:12pt;\n"
-"")
-        self.label_target.setObjectName("label_target")
-        self.verticalLayout_7.addWidget(self.label_target, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignBottom)
-        self.verticalLayout_6.addWidget(self.widget_result)
         self.button_next = QtWidgets.QPushButton(parent=self.frame_3)
-        self.button_next.setMinimumSize(QtCore.QSize(0, 70))
-        self.button_next.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.button_next.setMinimumSize(QtCore.QSize(300, 70))
+        self.button_next.setMaximumSize(QtCore.QSize(100, 70))
         self.button_next.setStyleSheet("QPushButton{background-color:#E9C400;\n"
 " font-weight: bold;\n"
 "   border-top-left-radius: 15px;\n"
@@ -254,7 +241,7 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.button_next.setObjectName("button_next")
-        self.verticalLayout_6.addWidget(self.button_next)
+        self.verticalLayout_6.addWidget(self.button_next, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_6.setStretch(0, 1)
         self.verticalLayout_6.setStretch(1, 1)
         self.verticalLayout_6.setStretch(2, 1)
@@ -267,13 +254,11 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
-        self.label.setText(_translate("Dialog", "PERFECT!"))
+        self.label_rate.setText(_translate("Dialog", "PERFECT!"))
         self.label_2.setText(_translate("Dialog", "TIME SPENT"))
-        self.label_3.setText(_translate("Dialog", "30s"))
+        self.label_timespent.setText(_translate("Dialog", "30s"))
         self.label_4.setText(_translate("Dialog", "ACCURACY"))
-        self.label_5.setText(_translate("Dialog", "96%"))
+        self.label_accuracy.setText(_translate("Dialog", "96%"))
         self.label_11.setText(_translate("Dialog", "PERFECT STREAK"))
-        self.label_12.setText(_translate("Dialog", "4"))
-        self.label_ai_thinks.setText(_translate("Dialog", "AI thinks: a cat"))
-        self.label_target.setText(_translate("Dialog", "Target: a dog sitting"))
+        self.label_perfectstreak.setText(_translate("Dialog", "4"))
         self.button_next.setText(_translate("Dialog", "Next"))

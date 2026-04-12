@@ -14,7 +14,7 @@ import resources_rc.icons_rc
 class Ui_mainMenu(object):
     def setupUi(self, mainMenu):
         mainMenu.setObjectName("mainMenu")
-        mainMenu.resize(1646, 777)
+        mainMenu.resize(1646, 761)
         icon = QtGui.QIcon.fromTheme("applications-games")
         mainMenu.setWindowIcon(icon)
         mainMenu.setStyleSheet("background-color:#161616; color:white;")
