@@ -18,12 +18,8 @@ class ContainerPage(qtw.QWidget):
         self.ui.setupUi(self)
         for i in range(self.ui.stack_pages.count()):
             self.ui.stack_pages.removeWidget(self.ui.stack_pages.widget(0))
-        self.setWindowFlags(
-            qtc.Qt.WindowType.Window |
-            qtc.Qt.WindowType.WindowCloseButtonHint |
-            qtc.Qt.WindowType.WindowMinimizeButtonHint |
-            qtc.Qt.WindowType.WindowMaximizeButtonHint
-        )
+        self.showMaximized()
+
         self.mainPage = MainPage(self)
         self.startingPage = StartingPage(self)
         self.playPage = PlayPage(self)
@@ -75,8 +71,5 @@ class ContainerPage(qtw.QWidget):
 
 app = qtw.QApplication(sys.argv)
 container_window = ContainerPage()
-container_window.setWindowState(
-    qtc.Qt.WindowState.WindowMaximized
-)
 container_window.show()
 app.exec()
