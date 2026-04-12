@@ -20,8 +20,56 @@ class DrawingCanvas(qtw.QWidget):
         self.image.fill(QtCore.Qt.GlobalColor.white)
         self.last_point = None
         self.brush_size = 3
-        self.brush_color = QtCore.Qt.GlobalColor.black
+        self.brush_color = QtGui.QColor(0, 0, 0)
         self.is_eraser = False
+        self.is_fill_mode = False
+
+    def set_fill_mode(self, enabled: bool):
+        self.is_fill_mode = enabled
+
+    def flood_fill(self, x: int, y: int, fill_color: QtGui.QColor):
+        width = self.image.width()
+        height = self.image.height()
+        
+        if x < 0 or x >= width or y < 0 or y >= height:
+            return
+        
+        target_color = self.image.pixelColor(x, y)
+        if target_color == fill_color:
+            return
+        
+        ptr = self.image.bits()
+        ptr.setsize(height * width * 4)
+        arr = np.array(ptr).reshape(height, width, 4)
+        
+        queue = [(y, x)]
+        visited = set()
+        visited.add((y, x))
+        
+        while queue:
+            cy, cx = queue.pop(0)
+            
+            if arr[cy, cx, 0] == target_color.blue() and arr[cy, cx, 1] == target_color.green() and arr[cy, cx, 2] == target_color.red():
+                arr[cy, cx, 0] = fill_color.blue()
+                arr[cy, cx, 1] = fill_color.green()
+                arr[cy, cx, 2] = fill_color.red()
+                arr[cy, cx, 3] = 255
+                
+                if cy > 0 and (cy - 1, cx) not in visited:
+                    queue.append((cy - 1, cx))
+                    visited.add((cy - 1, cx))
+                if cy < height - 1 and (cy + 1, cx) not in visited:
+                    queue.append((cy + 1, cx))
+                    visited.add((cy + 1, cx))
+                if cx > 0 and (cy, cx - 1) not in visited:
+                    queue.append((cy, cx - 1))
+                    visited.add((cy, cx - 1))
+                if cx < width - 1 and (cy, cx + 1) not in visited:
+                    queue.append((cy, cx + 1))
+                    visited.add((cy, cx + 1))
+        
+        ptr[:] = arr.tobytes()
+        self.update()
 
     def set_eraser_mode(self, enabled: bool):
         self.is_eraser = enabled
@@ -39,7 +87,12 @@ class DrawingCanvas(qtw.QWidget):
             print("time out")
         else:
             if event.button() == QtCore.Qt.MouseButton.LeftButton:
-                self.last_point = event.position().toPoint()
+                if self.is_fill_mode:
+                    x = int(event.position().x())
+                    y = int(event.position().y())
+                    self.flood_fill(x, y, self.brush_color)
+                else:
+                    self.last_point = event.position().toPoint()
 
     def mouseMoveEvent(self, event):
         if self.parent.time_left == 0:
@@ -142,20 +195,42 @@ font-size:12pt
         self.ui.verticalSlider.valueChanged.connect(self.adjust_brush_size)
         self.ui.button_erase.clicked.connect(self.toggle_eraser_mode)
         self.ui.button_pen.clicked.connect(self.toggle_pen_mode)
+        self.ui.button_fill.clicked.connect(self.toggle_fill_mode)
+
+    def reset_tool_buttons(self):
+        self.ui.button_pen.setStyleSheet("background:transparent; border:none;")
+        self.ui.button_erase.setStyleSheet("background:transparent; border:none;")
+        self.ui.button_fill.setStyleSheet("background:transparent; border:none;")
 
     def toggle_pen_mode(self):
         if self.canvas.is_eraser:
             self.canvas.set_eraser_mode(False)
+        if self.canvas.is_fill_mode:
+            self.canvas.set_fill_mode(False)
+        self.reset_tool_buttons()
         self.ui.button_pen.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
-        self.ui.button_erase.setStyleSheet("background:transparent; border:none;")
 
     def toggle_eraser_mode(self):
-        is_eraser = self.canvas.toggle_eraser()
-        if is_eraser:
-            self.ui.button_erase.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
-            self.ui.button_pen.setStyleSheet("background:transparent; border:none;")
-        else:
+        if self.canvas.is_eraser:
+            self.canvas.set_eraser_mode(False)
             self.ui.button_erase.setStyleSheet("background:transparent; border:none;")
+        else:
+            if self.canvas.is_fill_mode:
+                self.canvas.set_fill_mode(False)
+            self.canvas.set_eraser_mode(True)
+            self.reset_tool_buttons()
+            self.ui.button_erase.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
+
+    def toggle_fill_mode(self):
+        if self.canvas.is_fill_mode:
+            self.canvas.set_fill_mode(False)
+            self.ui.button_fill.setStyleSheet("background:transparent; border:none;")
+        else:
+            if self.canvas.is_eraser:
+                self.canvas.set_eraser_mode(False)
+            self.canvas.set_fill_mode(True)
+            self.reset_tool_buttons()
+            self.ui.button_fill.setStyleSheet("background-color: #0069EC; border-radius: 10px; border: 2px solid white;")
 
     def choose_color(self):
         color = QColorDialog.getColor()
