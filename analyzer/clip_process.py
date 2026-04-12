@@ -182,11 +182,10 @@ def score_drawing(image, challenge_phrase, category=None):
     top_guess = category_prompts[top_idx]
     top_guess_score = category_sims[top_idx]
 
-    # Calibrated score
-    calibrated = pos_sim - neg_sim
-
-    # Map to 0-100 (calibrated range ~ -0.05 to 0.20)
-    score = max(0, min(100, calibrated * 500))
+    # Calibrated score - direct similarity mapping
+    # CLIP typically outputs 0.15-0.35 for drawings
+    # Map: 0.15 → 0%, 0.40 → 100%
+    score = max(0, min(100, (pos_sim - 0.15) * 400))
 
     end_time = time.time()
     inference_time =( end_time - start_time ) * 1000
@@ -194,7 +193,6 @@ def score_drawing(image, challenge_phrase, category=None):
     print(f"Target: {positive}")
     print(f"Positive similarity: {pos_sim:.4f}")
     print(f"Negative avg: {neg_sim:.4f}")
-    print(f"Calibrated: {calibrated:.4f}")
     print(f"Score: {score:.2f}%")
     print(f"Top guess: {top_guess} ({top_guess_score:.4f})")
 
