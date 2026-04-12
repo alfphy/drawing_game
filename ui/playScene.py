@@ -116,7 +116,7 @@ class Ui_playScene(object):
         sizePolicy.setHeightForWidth(self.widget_9.sizePolicy().hasHeightForWidth())
         self.widget_9.setSizePolicy(sizePolicy)
         self.widget_9.setMinimumSize(QtCore.QSize(120, 80))
-        self.widget_9.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.widget_9.setMaximumSize(QtCore.QSize(16777215, 120))
         self.widget_9.setStyleSheet("    background-color: #1c1b1b;\n"
 "    border-radius: 15px;\n"
 "border:1px solid #262627;")
@@ -125,6 +125,7 @@ class Ui_playScene(object):
         self.verticalLayout_8.setProperty("contentsMargins", 10)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.label_ai_feedback = QtWidgets.QLabel(parent=self.widget_9)
+        self.label_ai_feedback.setWordWrap(True)
         self.label_ai_feedback.setStyleSheet("color:#a0a0a0; font-family: \"Segoe UI\";\n"
 "border:none;\n"
 "font-weight:500;\n"
