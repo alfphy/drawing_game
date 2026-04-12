@@ -1,5 +1,7 @@
 import PyQt6.QtWidgets as qtw
 import PyQt6.QtCore as qtc
+
+import roundsetting.game_state
 import ui.startingScene
 from PlayPage import PlayPage
 import analyzer
@@ -42,19 +44,40 @@ class StartingPage(qtw.QWidget):
         obj.setProperty("selected", str(not state).lower())
         obj.style().unpolish(obj)
         obj.style().polish(obj)
+
     def check_toggle_card(self, obj, state):
+        category = ""
         if obj.objectName() == "animals_card":
             self.ui.label_checked_animals.setVisible(not state)
+            category = "Animals"
         elif obj.objectName() == "flowers_card":
             self.ui.label_checked_flowers.setVisible(not state)
+            category = "Flowers"
         if obj.objectName() == "vehicles_card":
             self.ui.label_checked_vehicles.setVisible(not state)
+            category = "Vehicles"
+
         elif obj.objectName() == "emojis_card":
             self.ui.label_checked_emojis.setVisible(not state)
+            category = "Emojis"
+
+        if not state:
+            roundsetting.game_state.game_config.add_category(category)
+        else:
+            roundsetting.game_state.game_config.remove_category(category)
+        self.update_selection()
+
+
+
+    def update_selection(self):
+        selection = ', '.join(roundsetting.game_state.game_config.categories)
+        self.ui.label_selected.setText(str(selection))
 
 
 
     def button_start_click(self):
+        if len(roundsetting.game_state.game_config.categories) == 0:
+            return
         self.parent.ui.stack_pages.setCurrentIndex(2)
-        self.parent.playPage.start_timer(30)
+        self.parent.playPage.start_drawing()
 

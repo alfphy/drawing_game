@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui\playScene.ui'
+# Form implementation generated from reading ui file 'ui/playScene.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -7,14 +7,14 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import resources_rc.background_rc
 import resources_rc.icons_rc
+import resources_rc.background_rc
 
 
 class Ui_playScene(object):
     def setupUi(self, playScene):
         playScene.setObjectName("playScene")
-        playScene.resize(1338, 924)
+        playScene.resize(1338, 825)
         icon = QtGui.QIcon.fromTheme("applications-games")
         playScene.setWindowIcon(icon)
         playScene.setStyleSheet("background-color:#161616; color:white;")
@@ -29,7 +29,7 @@ class Ui_playScene(object):
         self.frame.setSizePolicy(sizePolicy)
         self.frame.setMinimumSize(QtCore.QSize(1000, 0))
         self.frame.setMaximumSize(QtCore.QSize(16777215, 16777215))
-        self.frame.setStyleSheet("background:none;")
+        self.frame.setStyleSheet("background:none; border:none;")
         self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
@@ -98,16 +98,17 @@ class Ui_playScene(object):
         self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.widget_8)
         self.horizontalLayout_8.setObjectName("horizontalLayout_8")
         self.label_difficulty = QtWidgets.QLabel(parent=self.widget_8)
-        self.label_difficulty.setMinimumSize(QtCore.QSize(50, 0))
-        self.label_difficulty.setMaximumSize(QtCore.QSize(20, 50))
-        self.label_difficulty.setStyleSheet("color:#e0e0e0; font-family:  \"Segoe UI\";\n"
+        self.label_difficulty.setMinimumSize(QtCore.QSize(130, 0))
+        self.label_difficulty.setMaximumSize(QtCore.QSize(100, 50))
+        self.label_difficulty.setStyleSheet("\n"
 "border:none;\n"
 "font-weight:500;\n"
 "background:transparent;\n"
-"\n"
-"")
+"color:#a0a0a0;\n"
+"font-family:\'sans-serif\'; font-size:16pt; ")
+        self.label_difficulty.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_difficulty.setObjectName("label_difficulty")
-        self.horizontalLayout_8.addWidget(self.label_difficulty)
+        self.horizontalLayout_8.addWidget(self.label_difficulty, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.verticalLayout_5.addWidget(self.widget_8)
         self.widget_9 = QtWidgets.QWidget(parent=self.verticalFrame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
@@ -122,7 +123,6 @@ class Ui_playScene(object):
 "border:1px solid #262627;")
         self.widget_9.setObjectName("widget_9")
         self.verticalLayout_8 = QtWidgets.QVBoxLayout(self.widget_9)
-        self.verticalLayout_8.setProperty("contentsMargins", 10)
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.label_ai_feedback = QtWidgets.QLabel(parent=self.widget_9)
         self.label_ai_feedback.setStyleSheet("color:#a0a0a0; font-family: \"Segoe UI\";\n"
@@ -131,8 +131,9 @@ class Ui_playScene(object):
 "font-size:10pt;\n"
 "background:transparent;")
         self.label_ai_feedback.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_ai_feedback.setWordWrap(True)
         self.label_ai_feedback.setObjectName("label_ai_feedback")
-        self.verticalLayout_8.addWidget(self.label_ai_feedback, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.verticalLayout_8.addWidget(self.label_ai_feedback, 0, QtCore.Qt.AlignmentFlag.AlignHCenter|QtCore.Qt.AlignmentFlag.AlignVCenter)
         self.verticalLayout_5.addWidget(self.widget_9)
         self.horizontalLayout_4.addWidget(self.verticalFrame_2, 0, QtCore.Qt.AlignmentFlag.AlignTop)
         self.verticalLayout = QtWidgets.QVBoxLayout()
@@ -170,7 +171,6 @@ class Ui_playScene(object):
         font.setFamily("sans-serif")
         font.setPointSize(21)
         font.setBold(True)
-        font.setWeight(75)
         self.label_phrase.setFont(font)
         self.label_phrase.setStyleSheet("\n"
 " font-family:\'sans-serif\'; font-size:21pt; font-weight:600; color:#ffffff;\n"
@@ -187,8 +187,8 @@ class Ui_playScene(object):
         self.drawing_space = QtWidgets.QHBoxLayout()
         self.drawing_space.setObjectName("drawing_space")
         self.verticalLayout.addLayout(self.drawing_space)
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.button_done = QtWidgets.QPushButton(parent=self.frame)
         self.button_done.setMinimumSize(QtCore.QSize(150, 70))
         self.button_done.setMaximumSize(QtCore.QSize(150, 16777215))
@@ -210,8 +210,10 @@ class Ui_playScene(object):
 "}\n"
 "")
         self.button_done.setObjectName("button_done")
-        self.horizontalLayout_3.addWidget(self.button_done, 0, QtCore.Qt.AlignmentFlag.AlignTop)
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
+        self.verticalLayout_4.addWidget(self.button_done, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Policy.Minimum, QtWidgets.QSizePolicy.Policy.Expanding)
+        self.verticalLayout_4.addItem(spacerItem)
+        self.verticalLayout.addLayout(self.verticalLayout_4)
         self.verticalLayout.setStretch(0, 1)
         self.verticalLayout.setStretch(1, 5)
         self.verticalLayout.setStretch(2, 1)
@@ -255,7 +257,7 @@ class Ui_playScene(object):
         self.widget_6.setObjectName("widget_6")
         self.verticalLayout_2.addWidget(self.widget_6, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalSlider = QtWidgets.QSlider(parent=self.widget_3)
-        self.verticalSlider.setMinimumSize(QtCore.QSize(0, 0))
+        self.verticalSlider.setMinimumSize(QtCore.QSize(50, 0))
         self.verticalSlider.setMaximumSize(QtCore.QSize(16777215, 120))
         self.verticalSlider.setStyleSheet("QSlider::groove:vertical {\n"
 "    width: 6px;\n"
@@ -348,59 +350,61 @@ class Ui_playScene(object):
 "background:transparent;\n"
 "margin-top:10px;")
         self.widget_12.setObjectName("widget_12")
-        self.verticalLayout_7 = QtWidgets.QVBoxLayout(self.widget_12)
-        self.verticalLayout_7.setContentsMargins(-1, 20, -1, -1)
-        self.verticalLayout_7.setSpacing(5)
-        self.verticalLayout_7.setObjectName("verticalLayout_7")
-        self.widget_colorselected = QtWidgets.QWidget(parent=self.widget_12)
-        self.widget_colorselected.setMinimumSize(QtCore.QSize(25, 25))
-        self.widget_colorselected.setMaximumSize(QtCore.QSize(25, 25))
-        self.widget_colorselected.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.widget_colorselected.setStyleSheet("background-color:black; \n"
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.widget_12)
+        self.verticalLayout_3.setContentsMargins(-1, 25, -1, 9)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.button_color_selected = QtWidgets.QPushButton(parent=self.widget_12)
+        self.button_color_selected.setMinimumSize(QtCore.QSize(25, 25))
+        self.button_color_selected.setMaximumSize(QtCore.QSize(25, 25))
+        self.button_color_selected.setStyleSheet("background-color:black; \n"
 "border: 2px solid white;\n"
 "    border-radius: 12px;\n"
 "margin:0px;")
-        self.widget_colorselected.setObjectName("widget_colorselected")
-        self.verticalLayout_7.addWidget(self.widget_colorselected, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.widget_14 = QtWidgets.QWidget(parent=self.widget_12)
-        self.widget_14.setMinimumSize(QtCore.QSize(25, 25))
-        self.widget_14.setMaximumSize(QtCore.QSize(25, 25))
-        self.widget_14.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.widget_14.setStyleSheet("background-color:#FACC15; \n"
-"border: none;\n"
-"    border-radius: 12px;margin:0px;")
-        self.widget_14.setObjectName("widget_14")
-        self.verticalLayout_7.addWidget(self.widget_14, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.widget_15 = QtWidgets.QWidget(parent=self.widget_12)
-        self.widget_15.setMinimumSize(QtCore.QSize(25, 25))
-        self.widget_15.setMaximumSize(QtCore.QSize(25, 25))
-        self.widget_15.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.widget_15.setStyleSheet("background-color:#EF4444; \n"
-"border: none;\n"
-"    border-radius: 12px;margin:0px;")
-        self.widget_15.setObjectName("widget_15")
-        self.verticalLayout_7.addWidget(self.widget_15, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.widget_16 = QtWidgets.QWidget(parent=self.widget_12)
-        self.widget_16.setMinimumSize(QtCore.QSize(25, 25))
-        self.widget_16.setMaximumSize(QtCore.QSize(25, 25))
-        self.widget_16.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.widget_16.setStyleSheet("background-color:#3B82F6; \n"
-"border: none;\n"
-"    border-radius: 12px;margin:0px;")
-        self.widget_16.setObjectName("widget_16")
-        self.verticalLayout_7.addWidget(self.widget_16, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
-        self.choose_color = QtWidgets.QPushButton(parent=self.widget_12)
-        self.choose_color.setMinimumSize(QtCore.QSize(30, 30))
-        self.choose_color.setMaximumSize(QtCore.QSize(30, 30))
-        self.choose_color.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.choose_color.setStyleSheet("border:none;margin:0px;")
-        self.choose_color.setText("")
+        self.button_color_selected.setText("")
+        self.button_color_selected.setObjectName("button_color_selected")
+        self.verticalLayout_3.addWidget(self.button_color_selected, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.button_saved_color1 = QtWidgets.QPushButton(parent=self.widget_12)
+        self.button_saved_color1.setMinimumSize(QtCore.QSize(25, 25))
+        self.button_saved_color1.setMaximumSize(QtCore.QSize(25, 25))
+        self.button_saved_color1.setStyleSheet("background-color:#3B82F6; \n"
+"    border-radius: 12px;\n"
+"margin:0px;\n"
+"border:none;")
+        self.button_saved_color1.setText("")
+        self.button_saved_color1.setObjectName("button_saved_color1")
+        self.verticalLayout_3.addWidget(self.button_saved_color1, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.button_saved_color2 = QtWidgets.QPushButton(parent=self.widget_12)
+        self.button_saved_color2.setMinimumSize(QtCore.QSize(25, 25))
+        self.button_saved_color2.setMaximumSize(QtCore.QSize(25, 25))
+        self.button_saved_color2.setStyleSheet("background-color:#EF4444; \n"
+"    border-radius: 12px;\n"
+"margin:0px;\n"
+"border:none;")
+        self.button_saved_color2.setText("")
+        self.button_saved_color2.setObjectName("button_saved_color2")
+        self.verticalLayout_3.addWidget(self.button_saved_color2, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.button_saved_color4 = QtWidgets.QPushButton(parent=self.widget_12)
+        self.button_saved_color4.setMinimumSize(QtCore.QSize(25, 25))
+        self.button_saved_color4.setMaximumSize(QtCore.QSize(25, 25))
+        self.button_saved_color4.setStyleSheet("background-color:#FACC15; \n"
+"    border-radius: 12px;\n"
+"border:none;\n"
+"\n"
+"margin:0px;")
+        self.button_saved_color4.setText("")
+        self.button_saved_color4.setObjectName("button_saved_color4")
+        self.verticalLayout_3.addWidget(self.button_saved_color4, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        self.button_color_picker = QtWidgets.QPushButton(parent=self.widget_12)
+        self.button_color_picker.setMinimumSize(QtCore.QSize(30, 30))
+        self.button_color_picker.setMaximumSize(QtCore.QSize(30, 30))
+        self.button_color_picker.setStyleSheet("border:none; background:transparent;")
+        self.button_color_picker.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/difficulty/color_palette.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
-        self.choose_color.setIcon(icon3)
-        self.choose_color.setIconSize(QtCore.QSize(30, 30))
-        self.choose_color.setObjectName("choose_color")
-        self.verticalLayout_7.addWidget(self.choose_color, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
+        icon3.addPixmap(QtGui.QPixmap(":/drawing/color_palette.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.button_color_picker.setIcon(icon3)
+        self.button_color_picker.setIconSize(QtCore.QSize(30, 30))
+        self.button_color_picker.setObjectName("button_color_picker")
+        self.verticalLayout_3.addWidget(self.button_color_picker, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.verticalLayout_6.addWidget(self.widget_12, 0, QtCore.Qt.AlignmentFlag.AlignHCenter)
         self.button_undo = QtWidgets.QPushButton(parent=self.widget_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
@@ -411,7 +415,7 @@ class Ui_playScene(object):
         self.button_undo.setMinimumSize(QtCore.QSize(50, 50))
         self.button_undo.setMaximumSize(QtCore.QSize(50, 50))
         self.button_undo.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.button_undo.setStyleSheet("background:transparent;\n"
+        self.button_undo.setStyleSheet("background:none;\n"
 "border:none;")
         self.button_undo.setText("")
         icon4 = QtGui.QIcon()

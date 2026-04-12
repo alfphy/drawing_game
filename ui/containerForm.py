@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui\containerForm.ui'
+# Form implementation generated from reading ui file 'ui/containerForm.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -7,8 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import resources_rc.background_rc
 import resources_rc.icons_rc
+import resources_rc.background_rc
 
 
 class Ui_ContainerForm(object):
@@ -26,6 +26,8 @@ class Ui_ContainerForm(object):
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName("verticalLayout")
         self.tab_bar = QtWidgets.QWidget(parent=ContainerForm)
+        self.tab_bar.setMinimumSize(QtCore.QSize(0, 80))
+        self.tab_bar.setMaximumSize(QtCore.QSize(16777215, 80))
         self.tab_bar.setAutoFillBackground(False)
         self.tab_bar.setStyleSheet("background-color:black\n"
 ";")
@@ -44,10 +46,16 @@ class Ui_ContainerForm(object):
         self.button_menu = QtWidgets.QPushButton(parent=self.tab_bar)
         self.button_menu.setMinimumSize(QtCore.QSize(50, 50))
         self.button_menu.setMaximumSize(QtCore.QSize(50, 50))
-        self.button_menu.setStyleSheet("background-color:white; \n"
+        self.button_menu.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.button_menu.setStyleSheet("background:transparent\n"
+"; \n"
 "border-radius:20px;\n"
 "")
         self.button_menu.setText("")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/general/arrow_back.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.button_menu.setIcon(icon)
+        self.button_menu.setIconSize(QtCore.QSize(48, 48))
         self.button_menu.setCheckable(False)
         self.button_menu.setDefault(False)
         self.button_menu.setFlat(True)

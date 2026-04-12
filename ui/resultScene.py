@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui\resultScene.ui'
+# Form implementation generated from reading ui file 'ui/resultScene.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -7,8 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import resources_rc.background_rc
 import resources_rc.icons_rc
+import resources_rc.background_rc
 
 
 class Ui_Dialog(object):

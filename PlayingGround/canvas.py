@@ -1,7 +1,7 @@
 import PyQt6.QtWidgets as qtw
 from PyQt6 import QtCore, QtGui
 import numpy as np
-
+from PIL import Image
 class DrawingCanvas(qtw.QWidget):
     def __init__(self, parent=None):
         super().__init__()
@@ -118,38 +118,40 @@ class DrawingCanvas(qtw.QWidget):
         canvas_painter.drawImage(0, 0, self.image)
 
     def save_image(self):
+        # Save
+        cropped = self.get_image()
+        pil_image = Image.fromarray(cropped.astype(np.uint8))
+        pil_image.save('draw.png')
+        print(f"Image cropped and saved! ")
+
+    def get_image(self):
         # Convert QImage to numpy array
         width = self.image.width()
         height = self.image.height()
         ptr = self.image.bits()
-        ptr.setsize(height * width * 4)  # ARGB32 = 4 bytes per pixel
+        ptr.setsize(height * width * 4)
         arr = np.array(ptr).reshape(height, width, 4)
 
-        # Find non-white pixels (alpha > 0 and not white)
-        # White = [255, 255, 255, 255]
+        empty_white = np.full((height, width, 3), 255, dtype=np.uint8)
+
         non_white = np.any(arr != [255, 255, 255, 255], axis=2)
 
         if not np.any(non_white):
             print("Canvas is empty!")
-            return
+            return empty_white
 
-        # Find bounding box of non-white pixels
         rows = np.any(non_white, axis=1)
         cols = np.any(non_white, axis=0)
 
         y_min, y_max = np.where(rows)[0][[0, -1]]
         x_min, x_max = np.where(cols)[0][[0, -1]]
 
-        # Add padding (optional)
         padding = 10
         y_min = max(0, y_min - padding)
         y_max = min(height - 1, y_max + padding)
         x_min = max(0, x_min - padding)
         x_max = min(width - 1, x_max + padding)
 
-        # Crop the image
-        cropped = self.image.copy(x_min, y_min, x_max - x_min + 1, y_max - y_min + 1)
-
-        # Save
-        cropped.save('draw.png')
-        print(f"Image cropped and saved! ({x_max - x_min + 1}x{y_max - y_min + 1})")
+        # Crop the numpy array
+        cropped_arr = arr[y_min:y_max + 1, x_min:x_max + 1, :3]  # RGB only
+        return cropped_arr

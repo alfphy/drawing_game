@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui\startingScene.ui'
+# Form implementation generated from reading ui file 'ui/startingScene.ui'
 #
 # Created by: PyQt6 UI code generator 6.11.0
 #
@@ -7,8 +7,8 @@
 
 
 from PyQt6 import QtCore, QtGui, QtWidgets
-import resources_rc.background_rc
 import resources_rc.icons_rc
+import resources_rc.background_rc
 
 
 class Ui_startingScene(object):
@@ -69,7 +69,7 @@ class Ui_startingScene(object):
         self.animals_bg_card.setMinimumSize(QtCore.QSize(0, 200))
         self.animals_bg_card.setMaximumSize(QtCore.QSize(16777215, 200))
         self.animals_bg_card.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
-        self.animals_bg_card.setMouseTracking(False)
+        self.animals_bg_card.setMouseTracking(True)
         self.animals_bg_card.setStyleSheet("QWidget{\n"
 "background-repeat: no-repeat;\n"
 " background-position: center;\n"
@@ -122,13 +122,13 @@ class Ui_startingScene(object):
         self.label_checked_animals.setGeometry(QtCore.QRect(260, 20, 48, 48))
         self.label_checked_animals.setMinimumSize(QtCore.QSize(48, 48))
         self.label_checked_animals.setMaximumSize(QtCore.QSize(48, 48))
-        self.label_checked_animals.setStyleSheet("background:-none;\n"
+        self.label_checked_animals.setStyleSheet("background:transparent;\n"
 "background-color:#0068ED;\n"
 "\n"
 "padding:5px;\n"
 "")
         self.label_checked_animals.setText("")
-        self.label_checked_animals.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_animals.setPixmap(QtGui.QPixmap(":/category/circle_checked.svg"))
         self.label_checked_animals.setScaledContents(True)
         self.label_checked_animals.setObjectName("label_checked_animals")
         self.horizontalLayout_2.addWidget(self.animals_card)
@@ -195,7 +195,7 @@ class Ui_startingScene(object):
 "padding:5px;\n"
 "")
         self.label_checked_flowers.setText("")
-        self.label_checked_flowers.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_flowers.setPixmap(QtGui.QPixmap(":/category/circle_checked.svg"))
         self.label_checked_flowers.setScaledContents(True)
         self.label_checked_flowers.setObjectName("label_checked_flowers")
         self.horizontalLayout_6.addWidget(self.flowers_card)
@@ -262,7 +262,7 @@ class Ui_startingScene(object):
 "padding:5px;\n"
 "")
         self.label_checked_vehicles.setText("")
-        self.label_checked_vehicles.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_vehicles.setPixmap(QtGui.QPixmap("ui/../assets/circle_checked.svg"))
         self.label_checked_vehicles.setScaledContents(True)
         self.label_checked_vehicles.setObjectName("label_checked_vehicles")
         self.horizontalLayout_7.addWidget(self.vehicles_card)
@@ -328,7 +328,7 @@ class Ui_startingScene(object):
 "padding:5px;\n"
 "")
         self.label_checked_emojis.setText("")
-        self.label_checked_emojis.setPixmap(QtGui.QPixmap("ui\\../assets/circle_checked.svg"))
+        self.label_checked_emojis.setPixmap(QtGui.QPixmap("ui/../assets/circle_checked.svg"))
         self.label_checked_emojis.setScaledContents(True)
         self.label_checked_emojis.setObjectName("label_checked_emojis")
         self.horizontalLayout_8.addWidget(self.emojis_card)
@@ -382,7 +382,7 @@ class Ui_startingScene(object):
 "padding:12px;\n"
 "margin-right:200px;\n"
 "\n"
-"")
+"font-family:\'sans-serif\'; font-size:12pt; font-weight:600; color:#ffffff;")
         self.label_selected.setTextFormat(QtCore.Qt.TextFormat.AutoText)
         self.label_selected.setWordWrap(True)
         self.label_selected.setObjectName("label_selected")
@@ -444,5 +444,5 @@ class Ui_startingScene(object):
         self.label_vehicles.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Vehicles</span></p></body></html>"))
         self.label_emojis.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:16pt; font-weight:600; color:#ffffff;\">Emojis</span></p></body></html>"))
         self.label_13.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-size:14pt; font-weight:600;\">🛈 Selection:</span></p></body></html>"))
-        self.label_selected.setText(_translate("startingScene", "<html><head/><body><p><span style=\" font-family:\'sans-serif\'; font-size:12pt; font-weight:600; color:#ffffff;\">Animals, Flowers, Vehicles, Emojis</span></p></body></html>"))
+        self.label_selected.setText(_translate("startingScene", "Animals, Flowers, Vehicles, Emojis"))
         self.button_start.setText(_translate("startingScene", "START GAME"))

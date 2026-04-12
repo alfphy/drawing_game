@@ -18,16 +18,19 @@ class MainPage(qtw.QWidget):
 
 
     def button_easy_click(self):
-        roundsetting.game_state.game_config = roundsetting.game_state.GameConfig(0, None)
+        roundsetting.game_state.game_config.set_difficulty(0)
         self.parent.ui.stack_pages.setCurrentIndex(1)
 
+
     def button_medium_click(self):
-        roundsetting.game_state.game_config = roundsetting.game_state.GameConfig(1, None)
+        roundsetting.game_state.game_config.set_difficulty(1)
 
         self.parent.ui.stack_pages.setCurrentIndex(1)
 
 
     def button_hard_click(self):
-        roundsetting.game_state.game_config = roundsetting.game_state.GameConfig(2, None)
+        roundsetting.game_state.game_config.set_difficulty(2)
 
         self.parent.ui.stack_pages.setCurrentIndex(1)
+
+

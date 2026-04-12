@@ -41,9 +41,9 @@ class ResultPage(qtw.QDialog):
                  self.ui.label_star5]
         for i, star in enumerate(stars):
             if i < count:
-                star.setPixmap(qtg.QPixmap(":/result/star_unrated.svg"))
+                star.setPixmap(qtg.QPixmap(":/result/star_rate.svg"))
             else:
-                star.setPixmap(qtg.QPixmap(":/result/star_rated.svg"))
+                star.setPixmap(qtg.QPixmap(":/result/star_unrated.svg"))
 
     def button_next_clicked(self):
         self.close()

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1338</width>
-    <height>924</height>
+    <height>825</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background:none;</string>
+      <string notr="true">background:none; border:none;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -188,30 +188,33 @@ margin-left:8px;
 border:1px solid #262627;</string>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_8">
-            <item>
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="label_difficulty">
               <property name="minimumSize">
                <size>
-                <width>50</width>
+                <width>130</width>
                 <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>20</width>
+                <width>100</width>
                 <height>50</height>
                </size>
               </property>
               <property name="styleSheet">
-               <string notr="true">color:#e0e0e0; font-family:  &quot;Segoe UI&quot;;
+               <string notr="true">
 border:none;
 font-weight:500;
 background:transparent;
-
-</string>
+color:#a0a0a0;
+font-family:'sans-serif'; font-size:16pt; </string>
               </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'sans-serif'; font-size:16pt; color:#a0a0a0;&quot;&gt;Easy&lt;/span&gt;&lt;/p&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
               </property>
              </widget>
             </item>
@@ -244,10 +247,7 @@ background:transparent;
 border:1px solid #262627;</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_8">
-            <property name="contentsMargins" stdset="0">
-             <number>10</number>
-            </property>
-            <item alignment="Qt::AlignHCenter">
+            <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
              <widget class="QLabel" name="label_ai_feedback">
               <property name="styleSheet">
                <string notr="true">color:#a0a0a0; font-family: &quot;Segoe UI&quot;;
@@ -261,6 +261,9 @@ background:transparent;</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -354,7 +357,6 @@ font-size:12pt
               <font>
                <family>sans-serif</family>
                <pointsize>21</pointsize>
-               <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
@@ -385,8 +387,8 @@ background:transparent;
          <layout class="QHBoxLayout" name="drawing_space"/>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_3">
-          <item alignment="Qt::AlignTop">
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item alignment="Qt::AlignHCenter">
            <widget class="QPushButton" name="button_done">
             <property name="minimumSize">
              <size>
@@ -423,6 +425,19 @@ background-color:#FFD901;
              <string>DONE</string>
             </property>
            </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </item>
@@ -534,7 +549,7 @@ border: 2px solid #262627;
              <widget class="QSlider" name="verticalSlider">
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>50</width>
                 <height>0</height>
                </size>
               </property>
@@ -735,15 +750,15 @@ border-radius:0;
 background:transparent;
 margin-top:10px;</string>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_7">
-               <property name="spacing">
-                <number>5</number>
-               </property>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
                <property name="topMargin">
-                <number>20</number>
+                <number>25</number>
+               </property>
+               <property name="bottomMargin">
+                <number>9</number>
                </property>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QWidget" name="widget_colorselected" native="true">
+                <widget class="QPushButton" name="button_color_selected">
                  <property name="minimumSize">
                   <size>
                    <width>25</width>
@@ -755,9 +770,6 @@ margin-top:10px;</string>
                    <width>25</width>
                    <height>25</height>
                   </size>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">background-color:black; 
@@ -765,10 +777,13 @@ border: 2px solid white;
     border-radius: 12px;
 margin:0px;</string>
                  </property>
+                 <property name="text">
+                  <string/>
+                 </property>
                 </widget>
                </item>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QWidget" name="widget_14" native="true">
+                <widget class="QPushButton" name="button_saved_color1">
                  <property name="minimumSize">
                   <size>
                    <width>25</width>
@@ -780,67 +795,71 @@ margin:0px;</string>
                    <width>25</width>
                    <height>25</height>
                   </size>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color:#FACC15; 
-border: none;
-    border-radius: 12px;margin:0px;</string>
-                 </property>
-                </widget>
-               </item>
-               <item alignment="Qt::AlignHCenter">
-                <widget class="QWidget" name="widget_15" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>25</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>25</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color:#EF4444; 
-border: none;
-    border-radius: 12px;margin:0px;</string>
-                 </property>
-                </widget>
-               </item>
-               <item alignment="Qt::AlignHCenter">
-                <widget class="QWidget" name="widget_16" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>25</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>25</width>
-                   <height>25</height>
-                  </size>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
                  </property>
                  <property name="styleSheet">
                   <string notr="true">background-color:#3B82F6; 
-border: none;
-    border-radius: 12px;margin:0px;</string>
+    border-radius: 12px;
+margin:0px;
+border:none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
                  </property>
                 </widget>
                </item>
                <item alignment="Qt::AlignHCenter">
-                <widget class="QPushButton" name="choose_color">
+                <widget class="QPushButton" name="button_saved_color2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color:#EF4444; 
+    border-radius: 12px;
+margin:0px;
+border:none;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QPushButton" name="button_saved_color4">
+                 <property name="minimumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>25</width>
+                   <height>25</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color:#FACC15; 
+    border-radius: 12px;
+border:none;
+
+margin:0px;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter">
+                <widget class="QPushButton" name="button_color_picker">
                  <property name="minimumSize">
                   <size>
                    <width>30</width>
@@ -853,18 +872,15 @@ border: none;
                    <height>30</height>
                   </size>
                  </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
                  <property name="styleSheet">
-                  <string notr="true">border:none;margin:0px;</string>
+                  <string notr="true">border:none; background:transparent;</string>
                  </property>
                  <property name="text">
                   <string/>
                  </property>
                  <property name="icon">
                   <iconset resource="../assets/icons.qrc">
-                   <normaloff>:/difficulty/color_palette.svg</normaloff>:/difficulty/color_palette.svg</iconset>
+                   <normaloff>:/drawing/color_palette.svg</normaloff>:/drawing/color_palette.svg</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -901,7 +917,7 @@ border: none;
                <cursorShape>PointingHandCursor</cursorShape>
               </property>
               <property name="styleSheet">
-               <string notr="true">background:transparent;
+               <string notr="true">background:none;
 border:none;</string>
               </property>
               <property name="text">
